@@ -5,27 +5,25 @@ import React from 'react';
 import { getComponent } from '@bluebase/core';
 
 export interface ComponentStateStyles {
-
 	/** Action button container styles */
-	actionRoot?: ViewStyle,
+	actionRoot?: ViewStyle;
 
 	/** Description text styles */
-	description?: TextStyle,
+	description?: TextStyle;
 
 	/** Image styles */
-	image?: ImageStyle,
+	image?: ImageStyle;
 
 	/** Styles of image container view */
-	imageRoot?: ViewStyle,
+	imageRoot?: ViewStyle;
 
 	/** Main root container styles */
-	root?: ViewStyle,
+	root?: ViewStyle;
 
 	/** Title styles */
-	title?: TextStyle,
+	title?: TextStyle;
 }
 export interface ComponentStateProps {
-
 	/**
 	 * Action title
 	 */
@@ -58,10 +56,10 @@ export interface ComponentStateProps {
 
 	styles?: ComponentStateStyles;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 }
 
 /**

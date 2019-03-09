@@ -3,30 +3,25 @@ import React from 'react';
 import { getComponent } from '@bluebase/core';
 
 export interface ButtonStyles {
-	root: ViewStyle,
-	primary: ViewStyle,
-	secondary: ViewStyle,
-	default: ViewStyle,
-	link: ViewStyle,
-	fullWidth: ViewStyle,
-	text: TextStyle,
-	primaryText: TextStyle,
-	secondaryText: TextStyle,
-	defaultText: TextStyle,
-	linkText: TextStyle,
+	root: ViewStyle;
+	primary: ViewStyle;
+	secondary: ViewStyle;
+	default: ViewStyle;
+	link: ViewStyle;
+	fullWidth: ViewStyle;
+	text: TextStyle;
+	primaryText: TextStyle;
+	secondaryText: TextStyle;
+	defaultText: TextStyle;
+	linkText: TextStyle;
 }
 
 export interface ButtonProps {
-
 	/* Label to be passed as child. */
 	children?: React.ReactNode;
 
 	/* Color prop of type enum. */
-	color?:
-		| 'primary'
-		| 'secondary'
-		| 'link'
-		| 'default';
+	color?: 'primary' | 'secondary' | 'link' | 'default';
 
 	/**
 	 * Callback function fired when button is pressed.
@@ -56,12 +51,12 @@ export interface ButtonProps {
 	/**
 	 * Button Styles
 	 */
-	styles?: ButtonStyles,
+	styles?: ButtonStyles;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 
 	[key: string]: any;
 }

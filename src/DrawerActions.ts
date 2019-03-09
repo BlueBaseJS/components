@@ -7,7 +7,7 @@ export interface DrawerActionsObject {
 }
 
 export interface DrawerActionsProps {
-	children: RenderPropChildren<DrawerActionsObject>
+	children: RenderPropChildren<DrawerActionsObject>;
 }
 
 /**

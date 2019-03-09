@@ -1,17 +1,16 @@
 import { getComponent } from '@bluebase/core';
 
 export interface LoadingStateProps {
-
 	/** Flag if loading has timedOut. */
-	timedOut?: boolean,
+	timedOut?: boolean;
 
 	/** Callback function when Retry button is pressed. */
-	retry?: () => void,
+	retry?: () => void;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 }
 
 /**

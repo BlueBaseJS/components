@@ -1,34 +1,31 @@
 import { ImageStyle, StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
-type renderFunction<T = any> = ((props: T) => React.ReactElement<T>);
+type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
 
 export interface HeaderProps {
-	headerTitleContainerStyle?: StyleProp<ViewStyle>,
-	headerRightContainerStyle?: StyleProp<ViewStyle>,
-	headerLeftContainerStyle?: StyleProp<ViewStyle>,
-	layoutPreset?: 'left' | 'center',
+	headerTitleContainerStyle?: StyleProp<ViewStyle>;
+	headerRightContainerStyle?: StyleProp<ViewStyle>;
+	headerLeftContainerStyle?: StyleProp<ViewStyle>;
+	layoutPreset?: 'left' | 'center';
 
-	backTitleVisible?: boolean,
-	headerBackAllowFontScaling?: boolean,
+	backTitleVisible?: boolean;
+	headerBackAllowFontScaling?: boolean;
 
-	styles?: Partial<HeaderStyles>
+	styles?: Partial<HeaderStyles>;
 
-  // NavigationOptions
+	// NavigationOptions
 	title?: string;
-	header?:
-    | React.ReactElement<any>
-    | renderFunction<any /*HeaderProps*/>
-    | null;
+	header?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	headerTransparent?: boolean;
 	headerTitle?: string | React.ReactElement<any>;
 	headerTitleStyle?: StyleProp<TextStyle>;
 	headerTitleAllowFontScaling?: boolean;
 	headerTintColor?: string;
 	headerLeft?:
-    | React.ReactElement<any>
-    | ((backButtonProps: any /*HeaderBackButtonProps*/) => React.ReactElement<any>)
-    | null;
+		| React.ReactElement<any>
+		| ((backButtonProps: any /*HeaderBackButtonProps*/) => React.ReactElement<any>)
+		| null;
 	headerBackTitle?: string | null;
 	headerBackImage?: React.ReactElement<any>;
 	headerTruncatedBackTitle?: string;
@@ -37,26 +34,23 @@ export interface HeaderProps {
 	headerRight?: React.ReactElement<any> | null;
 	headerStyle?: StyleProp<ViewStyle>;
 	headerForceInset?: any /*HeaderForceInset*/;
-	headerBackground?:
-    | React.ReactElement<any>
-    | renderFunction<any /*HeaderProps*/>
-    | null;
-    // [key: string]: any,
+	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
+	// [key: string]: any,
 }
 
 export interface HeaderStyles {
-	root: StyleProp<ViewStyle>,
-	wrapper: StyleProp<ViewStyle>,
-	transparentContainer: StyleProp<ViewStyle>,
-	header: StyleProp<ViewStyle>,
-	item: StyleProp<ViewStyle>,
-	iconMaskContainer: StyleProp<ViewStyle>,
-	iconMaskFillerRect: StyleProp<ViewStyle>,
-	iconMask: StyleProp<ImageStyle>,
-	title: StyleProp<ViewStyle>,
-	left: StyleProp<ViewStyle>,
-	right: StyleProp<ViewStyle>,
-	flexOne: StyleProp<ViewStyle>,
+	root: StyleProp<ViewStyle>;
+	wrapper: StyleProp<ViewStyle>;
+	transparentContainer: StyleProp<ViewStyle>;
+	header: StyleProp<ViewStyle>;
+	item: StyleProp<ViewStyle>;
+	iconMaskContainer: StyleProp<ViewStyle>;
+	iconMaskFillerRect: StyleProp<ViewStyle>;
+	iconMask: StyleProp<ImageStyle>;
+	title: StyleProp<ViewStyle>;
+	left: StyleProp<ViewStyle>;
+	right: StyleProp<ViewStyle>;
+	flexOne: StyleProp<ViewStyle>;
 }
 
 /**

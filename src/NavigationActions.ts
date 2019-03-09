@@ -5,42 +5,44 @@ export interface NavigationActionParams {
 }
 
 export interface NavitionActionRouteNamePayload {
-	routeName: string,
+	routeName: string;
 	params?: NavigationActionParams;
 }
 
 export interface NavitionActionPathPayload {
-	path: string,
+	path: string;
 	params?: NavigationActionParams;
 }
 
-export type NavigationActionPayload = string | NavitionActionRouteNamePayload | NavitionActionPathPayload;
+export type NavigationActionPayload =
+	| string
+	| NavitionActionRouteNamePayload
+	| NavitionActionPathPayload;
 
 export interface NavigationActionsObject {
+	navigate: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void;
+	goBack: () => void;
 
-	navigate: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void,
-	goBack: () => void,
+	replace: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void;
+	push: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void;
+	pop: (steps?: number) => void;
 
-	replace: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void,
-	push: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void,
-	pop: (steps?: number) => void,
+	setParams: (params: NavigationActionParams) => void;
+	getParam: (key: string, defaultValue: any) => any;
 
-	setParams: (params: NavigationActionParams) => void,
-	getParam: (key: string, defaultValue: any) => any,
-
-	source: any,
+	source: any;
 
 	state: {
-		key: string,
-		routeName: string,
-		url: string,
-		search?: string,
-		params: NavigationActionParams,
-	}
+		key: string;
+		routeName: string;
+		url: string;
+		search?: string;
+		params: NavigationActionParams;
+	};
 }
 
 export interface NavigationActionsProps {
-	children: ((actions: NavigationActionsObject) => React.ReactNode)
+	children: (actions: NavigationActionsObject) => React.ReactNode;
 }
 
 export const NavigationActions = getComponent<NavigationActionsProps>('NavigationActions');

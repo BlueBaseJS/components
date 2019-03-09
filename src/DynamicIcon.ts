@@ -3,7 +3,6 @@ import React from 'react';
 import { getComponent } from '@bluebase/core';
 
 export interface DynamicIconProps {
-
 	/**
 	 * If value is:
 	 *
@@ -37,10 +36,10 @@ export interface DynamicIconProps {
 	 */
 	size?: number;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 
 	[key: string]: any;
 }

@@ -3,7 +3,7 @@ import { TextProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface ListSubheaderProps extends TextProps {
-	children: React.ReactNode,
+	children: React.ReactNode;
 	inset?: boolean;
 }
 

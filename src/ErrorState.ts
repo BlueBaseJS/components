@@ -1,17 +1,16 @@
 import { getComponent } from '@bluebase/core';
 
-
 export interface ErrorStateProps {
 	/** The error to display */
-	error?: Error,
+	error?: Error;
 
 	/** Callack function, called when retry button is pressed. */
-	retry?: () => void,
+	retry?: () => void;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 }
 
 /**

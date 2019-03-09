@@ -3,12 +3,12 @@ import { NavigationActionParams } from './NavigationActions';
 import { getComponent } from '@bluebase/core';
 
 export interface LinkProps {
-	routeName?: string,
-	path?: string,
+	routeName?: string;
+	path?: string;
 	params?: NavigationActionParams;
-	replace?: boolean,
+	replace?: boolean;
 	onPress?: (ev: NativeSyntheticEvent<NativeTouchEvent>) => void;
-	component?: React.ComponentType<any>
+	component?: React.ComponentType<any>;
 }
 
 export const Link = getComponent<LinkProps>('Link');
