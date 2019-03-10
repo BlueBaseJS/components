@@ -12,6 +12,7 @@ export * from './ErrorState';
 export * from './Header';
 export * from './HeaderBackButton';
 export * from './HeaderTitle';
+export * from './Icon';
 export * from './Image';
 export * from './Link';
 export * from './ListAccordion';
