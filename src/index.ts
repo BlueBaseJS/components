@@ -27,5 +27,6 @@ export * from './Noop';
 export * from './PluginIcon';
 export * from './Redirect';
 export * from './TabBar';
+export * from './TextInput';
 export * from './Text';
 export * from './View';
