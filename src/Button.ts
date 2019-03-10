@@ -21,7 +21,10 @@ export interface ButtonProps {
 	children?: React.ReactNode;
 
 	/* Color prop of type enum. */
-	color?: 'primary' | 'secondary' | 'link' | 'default';
+	color?: 'primary' | 'secondary' | 'default';
+
+	/** Button variant */
+	variant?: 'text' | 'outlined' | 'contained';
 
 	/**
 	 * Callback function fired when button is pressed.
@@ -37,11 +40,6 @@ export interface ButtonProps {
 	 * If true, button is generated with 100% width of the container.
 	 */
 	fullWidth?: boolean;
-
-	/**
-	 * If true, shows active state of the button.
-	 */
-	active?: boolean;
 
 	/**
 	 * The size of the button.
