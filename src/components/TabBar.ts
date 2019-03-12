@@ -2,7 +2,7 @@
 
 import { Animated, StyleProp, ViewStyle } from 'react-native';
 import { ReactNode } from 'react';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 // export interface TabBarProps {
 

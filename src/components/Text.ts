@@ -1,5 +1,5 @@
 import { TextProps as NativeTextProps, TextStyle } from 'react-native';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface TextStyles {
 	root: TextStyle;

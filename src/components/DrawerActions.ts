@@ -1,4 +1,5 @@
-import { RenderPropChildren, getComponent } from '@bluebase/core';
+import { RenderPropChildren } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface DrawerActionsObject {
 	openDrawer: () => void;

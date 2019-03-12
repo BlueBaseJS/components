@@ -1,4 +1,4 @@
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface ErrorStateProps {
 	/** The error to display */

@@ -1,5 +1,5 @@
 import { NativeSyntheticEvent, NativeTouchEvent, ViewProps } from 'react-native';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface DrawerSlideEvent extends NativeSyntheticEvent<NativeTouchEvent> {}
 
