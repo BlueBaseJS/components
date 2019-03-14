@@ -20,6 +20,9 @@ export interface ButtonProps {
 	/* Label to be passed as child. */
 	children?: React.ReactNode;
 
+	/** Ignored if children prop is provided. Otherwise this string is used. */
+	title?: string;
+
 	/* Color prop of type enum. */
 	color?: 'primary' | 'secondary' | 'default';
 
