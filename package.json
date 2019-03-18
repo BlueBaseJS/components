@@ -43,7 +43,7 @@
     "version": "standard-version",
     "reset": "git clean -dfx && git reset --hard && npm i",
     "all": "run-s reset test cov:check doc:html",
-    "prepare-release": "run-s all version doc:publish",
+    "manual-release": "run-s all version doc:publish",
     "size": "size-limit",
     "storybook:start": "bluebase storybook:start",
     "storybook-native": "bluebase storybook-native:start",
