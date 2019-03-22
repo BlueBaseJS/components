@@ -92,5 +92,5 @@ export const TextInputDefaultProps = {
 	multiline: false,
 	numberOfLines: 1,
 	secureTextEntry: false,
-	style: {}
+	style: {},
 };
