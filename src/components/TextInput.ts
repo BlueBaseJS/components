@@ -79,3 +79,18 @@ export interface TextInputProps extends RNTextInputProps {
  * as a numeric keypad.
  */
 export const TextInput = getComponent<TextInputProps>('Text');
+
+/**
+ * Default props for TextInput component
+ */
+export const TextInputDefaultProps = {
+	autoCapitalize: 'sentences',
+	autoComplete: 'on',
+	autoCorrect: true,
+	editable: true,
+	keyboardType: 'default',
+	multiline: false,
+	numberOfLines: 1,
+	secureTextEntry: false,
+	style: {},
+};
