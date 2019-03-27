@@ -1,8 +1,7 @@
 import { ViewProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export interface RadioGroupProps  extends ViewProps {
-
+export interface RadioGroupProps extends ViewProps {
 	/**
 	 * Function to execute on selection change.
 	 */
@@ -25,5 +24,7 @@ export const RadioGroup = getComponent<RadioGroupProps>('RadioGroup');
  * Default props for RadioGroup component
  */
 export const RadioGroupDefaultProps = {
-	onValueChange: () => { return; }
+	onValueChange: () => {
+		return;
+	},
 };

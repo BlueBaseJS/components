@@ -1,11 +1,11 @@
 import { ViewProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export interface CheckBoxProps  extends ViewProps {
+export interface CheckBoxProps extends ViewProps {
 	/**
 	 * Color of the CheckBox.
 	 */
-	color?:  'primary' | 'secondary' | 'default' | string;
+	color?: 'primary' | 'secondary' | 'default' | string;
 
 	/**
 	 * If true the user won't be able to toggle the CheckBox.
@@ -38,7 +38,6 @@ export interface CheckBoxProps  extends ViewProps {
 	 * The position of the label.
 	 */
 	labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
-
 }
 
 export const CheckBox = getComponent<CheckBoxProps>('CheckBox');
@@ -47,8 +46,10 @@ export const CheckBox = getComponent<CheckBoxProps>('CheckBox');
  * Default props for CheckBox component
  */
 export const CheckBoxDefaultProps = {
-	color:  'primary',
+	color: 'primary',
 	disabled: false,
 	labelPlacement: 'end',
-	onValueChange: () => { return; },
+	onValueChange: () => {
+		return;
+	},
 };

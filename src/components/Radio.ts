@@ -1,11 +1,11 @@
 import { ViewProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export interface RadioProps  extends ViewProps {
+export interface RadioProps extends ViewProps {
 	/**
 	 * Color of the Radio.
 	 */
-	color?:  'primary' | 'secondary' | 'default' | string;
+	color?: 'primary' | 'secondary' | 'default' | string;
 
 	/**
 	 * If true the user won't be able to toggle the Radio.
@@ -38,7 +38,6 @@ export interface RadioProps  extends ViewProps {
 	 * The position of the label.
 	 */
 	labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
-
 }
 
 export const Radio = getComponent<RadioProps>('Radio');
@@ -47,8 +46,10 @@ export const Radio = getComponent<RadioProps>('Radio');
  * Default props for Radio component
  */
 export const RadioDefaultProps = {
-	color:  'primary',
+	color: 'primary',
 	disabled: false,
 	labelPlacement: 'end',
-	onValueChange: () => { return; },
+	onValueChange: () => {
+		return;
+	},
 };
