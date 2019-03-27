@@ -21,10 +21,9 @@
 ## 🤝 Compatibility
 
 | 🌏 Web | 🖥 Electron | 📱 React Native |
-| :---: | :--------: | :------------: |
-|✅|✅|❌|
+| :----: | :---------: | :--------------: |
+|   ✅   |      ✅     |        ✅       |
 
 ## Docs
 
-- [Storybook](https://bluebasejs.github.io/components/storybook/)
-- [API Docs](https://bluebasejs.github.io/components/)
+-  [API Docs](https://bluebasejs.github.io/components/)
