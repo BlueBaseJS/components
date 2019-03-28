@@ -2,7 +2,7 @@ export * from './ActivityIndicator';
 export * from './Body1';
 export * from './Body2';
 export * from './Button';
-export * from './Checkbox';
+export * from './Checkbo';
 export * from './Caption';
 export * from './ComponentState';
 export * from './Divider';
