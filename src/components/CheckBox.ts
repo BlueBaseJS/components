@@ -51,7 +51,7 @@ export const Checkbox = getComponent<CheckboxProps>('Checkbox');
  * Default props for Checkbox component
  */
 export const CheckboxDefaultProps = {
-	color: 'primary',
+	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',
 	onValueChange: () => {
