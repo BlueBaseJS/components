@@ -10,7 +10,7 @@ export interface RadioGroupProps extends ViewProps {
 	/**
 	 * Value of the currently selected radio button.
 	 */
-	value: string;
+	value: string | number | boolean;
 
 	/**
 	 * React elements containing radio buttons.

@@ -3,6 +3,11 @@ import { getComponent } from '../getComponent';
 
 export interface RadioProps extends ViewProps {
 	/**
+	 * If true, the component is checked.
+	 */
+	checked?: boolean;
+
+	/**
 	 * Color of the Radio.
 	 */
 	color?: 'primary' | 'secondary' | 'default' | string;
@@ -24,10 +29,9 @@ export interface RadioProps extends ViewProps {
 	testID?: string;
 
 	/**
-	 * The value of the Radio. If true the Radio will be turned on.
-	 * Default value is false.
+	 * The value of the component.
 	 */
-	value?: boolean;
+	value?: string | number | boolean;
 
 	/**
 	 * The text to be used in an enclosing label element.
@@ -46,6 +50,7 @@ export const Radio = getComponent<RadioProps>('Radio');
  * Default props for Radio component
  */
 export const RadioDefaultProps = {
+	checked: false,
 	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',

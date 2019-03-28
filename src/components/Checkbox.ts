@@ -3,6 +3,11 @@ import { getComponent } from '../getComponent';
 
 export interface CheckboxProps extends ViewProps {
 	/**
+	 * If true, the component is checked.
+	 */
+	checked?: boolean;
+
+	/**
 	 * Color of the Checkbox.
 	 */
 	color?: 'primary' | 'secondary' | 'default' | string;
@@ -24,10 +29,9 @@ export interface CheckboxProps extends ViewProps {
 	testID?: string;
 
 	/**
-	 * The value of the Checkbox. If true the Checkbox will be turned on.
-	 * Default value is false.
+	 * The value of the component.
 	 */
-	value?: boolean;
+	value?: string | number | boolean;
 
 	/**
 	 * The text to be used in an enclosing label element.
@@ -51,6 +55,7 @@ export const Checkbox = getComponent<CheckboxProps>('Checkbox');
  * Default props for Checkbox component
  */
 export const CheckboxDefaultProps = {
+	checked: false,
 	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',
