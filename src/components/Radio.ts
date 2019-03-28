@@ -46,7 +46,7 @@ export const Radio = getComponent<RadioProps>('Radio');
  * Default props for Radio component
  */
 export const RadioDefaultProps = {
-	color: 'primary',
+	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',
 	onValueChange: () => {

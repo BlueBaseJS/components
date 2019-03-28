@@ -1,14 +1,14 @@
 import { ViewProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export interface CheckBoxProps extends ViewProps {
+export interface CheckboxProps extends ViewProps {
 	/**
-	 * Color of the CheckBox.
+	 * Color of the Checkbox.
 	 */
 	color?: 'primary' | 'secondary' | 'default' | string;
 
 	/**
-	 * If true the user won't be able to toggle the CheckBox.
+	 * If true the user won't be able to toggle the Checkbox.
 	 * Default value is false.
 	 */
 	disabled?: boolean;
@@ -24,7 +24,7 @@ export interface CheckBoxProps extends ViewProps {
 	testID?: string;
 
 	/**
-	 * The value of the CheckBox. If true the CheckBox will be turned on.
+	 * The value of the Checkbox. If true the Checkbox will be turned on.
 	 * Default value is false.
 	 */
 	value?: boolean;
@@ -38,15 +38,20 @@ export interface CheckBoxProps extends ViewProps {
 	 * The position of the label.
 	 */
 	labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
+
+	/**
+	 * If true, the component appears indeterminate.
+	 */
+	indeterminate?: boolean;
 }
 
-export const CheckBox = getComponent<CheckBoxProps>('CheckBox');
+export const Checkbox = getComponent<CheckboxProps>('Checkbox');
 
 /**
- * Default props for CheckBox component
+ * Default props for Checkbox component
  */
-export const CheckBoxDefaultProps = {
-	color: 'primary',
+export const CheckboxDefaultProps = {
+	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',
 	onValueChange: () => {

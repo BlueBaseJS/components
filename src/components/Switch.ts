@@ -24,7 +24,7 @@ export const Switch = getComponent<SwitchProps>('Switch');
  * Default props for Switch component
  */
 export const SwitchDefaultProps = {
-	color: 'primary',
+	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'start',
 	onValueChange: () => {
