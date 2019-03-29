@@ -29,14 +29,9 @@ export interface SwitchProps extends Omit<NativeSwitchProps, 'value' | 'onValueC
 	value?: string | number | boolean;
 
 	/**
-	 * Similar to `onValueChange`, but passes `checked` prop instead of `value`.
-	 */
-	onChange?: (checked: boolean) => void;
-
-	/**
 	 * Invoked with the new value when the value changes.
 	 */
-	onValueChange?: (value: string | number | boolean) => void;
+	onValueChange?: (value: string | number | boolean, checked: boolean) => void;
 }
 
 export const Switch = getComponent<SwitchProps>('Switch');
