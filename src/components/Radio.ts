@@ -59,7 +59,4 @@ export const RadioDefaultProps = {
 	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',
-	onValueChange: () => {
-		return;
-	},
 };

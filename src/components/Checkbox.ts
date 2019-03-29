@@ -64,7 +64,4 @@ export const CheckboxDefaultProps = {
 	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'end',
-	onValueChange: () => {
-		return;
-	},
 };

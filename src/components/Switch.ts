@@ -49,7 +49,4 @@ export const SwitchDefaultProps = {
 	color: 'secondary',
 	disabled: false,
 	labelPlacement: 'start',
-	onValueChange: () => {
-		return;
-	},
 };
