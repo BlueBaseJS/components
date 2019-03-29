@@ -5,7 +5,7 @@ export interface RadioGroupProps extends ViewProps {
 	/**
 	 * Function to execute on selection change.
 	 */
-	onValueChange: (value: string) => any;
+	onValueChange: (value: string | number | boolean) => any;
 
 	/**
 	 * Value of the currently selected radio button.

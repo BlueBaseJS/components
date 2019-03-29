@@ -2,7 +2,7 @@ import { Omit } from '@bluebase/core';
 import { SwitchProps as NativeSwitchProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export interface SwitchProps extends Omit<NativeSwitchProps, 'value'> {
+export interface SwitchProps extends Omit<NativeSwitchProps, 'value' | 'onValueChange'> {
 	/**
 	 * If true, the component is checked.
 	 */
@@ -27,6 +27,16 @@ export interface SwitchProps extends Omit<NativeSwitchProps, 'value'> {
 	 * The value of the component.
 	 */
 	value?: string | number | boolean;
+
+	/**
+	 * Similar to `onValueChange`, but passes `checked` prop instead of `value`.
+	 */
+	onChange?: (checked: boolean) => void;
+
+	/**
+	 * Invoked with the new value when the value changes.
+	 */
+	onValueChange?: (value: string | number | boolean) => void;
 }
 
 export const Switch = getComponent<SwitchProps>('Switch');
