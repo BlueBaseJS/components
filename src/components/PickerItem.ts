@@ -7,5 +7,4 @@ export const PickerItem = getComponent<PickerItemProps>('PickerItem');
 /**
  * Default props for PickerItem component
  */
-export const PickerItemDefaultProps = {
-};
+export const PickerItemDefaultProps = {};
