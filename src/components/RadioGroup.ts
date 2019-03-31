@@ -16,6 +16,21 @@ export interface RadioGroupProps extends ViewProps {
 	 * React elements containing radio buttons.
 	 */
 	children: React.ReactNode;
+
+	/**
+	 * The helper text content.
+	 */
+	helperText?: React.ReactNode;
+
+	/**
+	 * The label content.
+	 */
+	label?: React.ReactNode;
+
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 }
 
 export const RadioGroup = getComponent<RadioGroupProps>('RadioGroup');
