@@ -4,7 +4,7 @@ import { PickerProps as RNPickerProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
 export interface PickerProps extends Omit<RNPickerProps, 'mode'> {
-	Item: React.ComponentType<PickerItemProps>;
+
 	/**
 	 * If `true`, the input will be disabled.
 	 */
@@ -55,6 +55,11 @@ export interface PickerProps extends Omit<RNPickerProps, 'mode'> {
 	 * Web only
 	 */
 	name?: string;
+
+	/**
+	 * The string that will be rendered before text input has been entered
+	 */
+	placeholder?: string;
 }
 
 type PickerType = React.ComponentType<PickerProps> & { Item: React.ComponentType<PickerItemProps> };
@@ -70,5 +75,5 @@ Picker.Item = PickerItem;
  * Default props for Picker component
  */
 export const PickerDefaultProps = {
-	mode: 'dialog',
+	mode: 'default',
 };

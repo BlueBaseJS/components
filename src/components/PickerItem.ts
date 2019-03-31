@@ -1,7 +1,10 @@
-import { PickerItemProps } from 'react-native';
+import { PickerItemProps as RNPickerItemProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export { PickerItemProps };
+export interface PickerItemProps extends RNPickerItemProps {
+	disabled?: boolean;
+}
+
 export const PickerItem = getComponent<PickerItemProps>('PickerItem');
 
 /**
