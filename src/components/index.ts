@@ -37,6 +37,7 @@ export * from './Noop';
 export * from './Overline';
 export * from './PluginIcon';
 export * from './Picker';
+export * from './PickerItem';
 export * from './Radio';
 export * from './RadioGroup';
 export * from './Redirect';

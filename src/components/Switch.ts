@@ -32,6 +32,17 @@ export interface SwitchProps extends Omit<NativeSwitchProps, 'value' | 'onValueC
 	 * Invoked with the new value when the value changes.
 	 */
 	onValueChange?: (value: string | number | boolean, checked: boolean) => void;
+
+	/**
+	 * (Web Only) The id of the input element. Use this property to make label
+	 * and helperText accessible for screen readers.
+	 */
+	id?: string;
+
+	/**
+	 * Web only
+	 */
+	name?: string;
 }
 
 export const Switch = getComponent<SwitchProps>('Switch');
