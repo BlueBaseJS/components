@@ -47,6 +47,17 @@ export interface CheckboxProps extends ViewProps {
 	 * If true, the component appears indeterminate.
 	 */
 	indeterminate?: boolean;
+
+	/**
+	 * (Web Only) The id of the input element. Use this property to make label
+	 * and helperText accessible for screen readers.
+	 */
+	id?: string;
+
+	/**
+	 * Web only
+	 */
+	name?: string;
 }
 
 export const Checkbox = getComponent<CheckboxProps>('Checkbox');
