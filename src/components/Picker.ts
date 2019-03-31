@@ -4,7 +4,6 @@ import { PickerProps as RNPickerProps } from 'react-native';
 import { getComponent } from '../getComponent';
 
 export interface PickerProps extends Omit<RNPickerProps, 'mode'> {
-
 	/**
 	 * If `true`, the input will be disabled.
 	 */
