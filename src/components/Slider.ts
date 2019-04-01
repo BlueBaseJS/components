@@ -18,6 +18,26 @@ export interface SliderProps extends NativeSliderProps {
 	 * Color of the foreground switch grip.
 	 */
 	thumbTintColor?: 'primary' | 'secondary' | 'default' | string;
+
+	/**
+	 * If `true`, the label will be displayed in an error state.
+	 */
+	error?: boolean;
+
+	/**
+	 * The helper text content.
+	 */
+	helperText?: React.ReactNode;
+
+	/**
+	 * The label content.
+	 */
+	label?: React.ReactNode;
+
+	/**
+	 * If `true`, the label is displayed as required and the input will be required.
+	 */
+	required?: boolean;
 }
 
 export const Slider = getComponent<SliderProps>('Slider');
