@@ -28,6 +28,11 @@ export interface RadioGroupProps extends ViewProps {
 	label?: React.ReactNode;
 
 	/**
+	 * If `true`, the label will be displayed in an error state.
+	 */
+	error?: boolean;
+
+	/**
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
