@@ -55,6 +55,11 @@ export interface ButtonProps {
 	styles?: ButtonStyles;
 
 	/**
+	 * Whether to show a loading indicator.
+	 */
+	loading?: boolean;
+
+	/**
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
@@ -63,3 +68,14 @@ export interface ButtonProps {
 }
 
 export const Button = getComponent<ButtonProps>('Button');
+
+/**
+ * Default props for TextInput component
+ */
+export const ButtonDefaultProps: Partial<ButtonProps> = {
+	color: 'primary',
+	fullWidth: false,
+	loading: false,
+	size: 'medium',
+	variant: 'contained',
+};
