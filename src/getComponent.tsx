@@ -1,4 +1,4 @@
-import { BlueBase, BlueBaseConsumer } from '@bluebase/core';
+import { BlueBase, BlueBaseContext } from '@bluebase/core';
 import React from 'react';
 
 /**
@@ -14,34 +14,43 @@ export function getComponent<T = any>(...keys: string[]) {
 		throw Error('getComponent method needs at least one key');
 	}
 
-	let Component: React.ComponentType<any>;
 	const displayName = keys.join('_');
 
-	const BlueBaseComponent = (props: T) => (
-		<BlueBaseConsumer>
-			{(BB: BlueBase) => {
+	return class BlueBaseComponent extends React.Component<any> {
 
-				// If there is no BlueBase context, throw an Error
-				if (!BB) {
-					// tslint:disable-next-line: max-line-length
-					throw Error(`Could not resolve component "${displayName}" in "getComponent" command. Reason: BlueBase context not found.`);
-				}
+		static displayName = displayName;
 
-				// We don't want to resolve the component on every render.
-				// If we don't do this, a new component is created on every
-				// render, causing various set of problems.
-				if (!Component) {
-					// Do the rain dance
-					Component = BB.Components.resolve(...keys);
-				}
+		static contextType = BlueBaseContext;
 
-				// Render
-				return React.createElement(Component, props);
-			}}
-		</BlueBaseConsumer>
-	);
+		Component?: React.ComponentType<T>;
 
-	BlueBaseComponent.displayName = displayName;
 
-	return BlueBaseComponent as React.ComponentType<T>;
+		// Before mounting, resolve component and store it.
+		// So we don't end up creating a new component during every render
+		componentWillMount() {
+
+			const BB: BlueBase = this.context;
+
+			// If there is no BlueBase context, throw an Error
+			if (!BB) {
+				// tslint:disable-next-line: max-line-length
+				throw Error(`Could not resolve component "${displayName}" in "getComponent" command. Reason: BlueBase context not found.`);
+			}
+
+			// We don't want to resolve the component on every render.
+			// If we don't do this, a new component is created on every
+			// render, causing various set of problems.
+			if (!this.Component) {
+
+				// Do the rain dance
+				this.Component = BB.Components.resolve(...keys);
+			}
+
+		}
+
+		render() {
+			// Render
+			return this.Component? React.createElement(this.Component, this.props) : null;
+		}
+	};
 }
