@@ -1,7 +1,6 @@
 import { getComponent } from '../getComponent';
 
 export interface TabsProps {
-
 	/** If `true`, the tabs will be centered. This property is intended for large views. */
 	centered?: boolean;
 
@@ -12,7 +11,7 @@ export interface TabsProps {
 	indicatorColor?: 'primary' | 'secondary';
 
 	/** Callback fired when the value changes. */
-	onChange?: ((event: object, value: number) => void);
+	onChange?: (event: object, value: number) => void;
 
 	/**
 	 * The value of the currently selected Tab. If you don't want any selected

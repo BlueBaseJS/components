@@ -7,5 +7,4 @@ export const ImageBackground = getComponent<ImageBackgroundProps>('ImageBackgrou
 /**
  * Default props for ImageBackground component
  */
-export const ImageBackgroundDefaultProps = {
-};
+export const ImageBackgroundDefaultProps = {};

@@ -2,7 +2,6 @@ import { DynamicIconProps } from './DynamicIcon';
 import { getComponent } from '../getComponent';
 
 export interface BottomNavigationActionProps {
-
 	/** If true, the BottomNavigationAction will show its label. */
 	showLabel?: boolean;
 
@@ -16,13 +15,14 @@ export interface BottomNavigationActionProps {
 	value?: string;
 }
 
-export const BottomNavigationActionDefaultProps = {
-};
+export const BottomNavigationActionDefaultProps = {};
 
 /**
  * # 🗂 BottomNavigationAction
  * A single tab component in the Bottom Navigation.
  */
-export const BottomNavigationAction = getComponent<BottomNavigationActionProps>('BottomNavigationAction');
+export const BottomNavigationAction = getComponent<BottomNavigationActionProps>(
+	'BottomNavigationAction'
+);
 
 BottomNavigationAction.defaultProps = BottomNavigationActionDefaultProps;

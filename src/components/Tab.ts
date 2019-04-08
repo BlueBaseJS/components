@@ -2,7 +2,6 @@ import { DynamicIconProps } from './DynamicIcon';
 import { getComponent } from '../getComponent';
 
 export interface TabProps {
-
 	/** If true, the tab will be disabled. */
 	disabled?: boolean;
 
@@ -17,7 +16,7 @@ export interface TabProps {
 }
 
 export const TabDefaultProps = {
-	disabled: false
+	disabled: false,
 };
 
 /**

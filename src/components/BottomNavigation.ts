@@ -1,7 +1,6 @@
 import { getComponent } from '../getComponent';
 
 export interface BottomNavigationProps {
-
 	/** If true, all BottomNavigationActions will show their labels */
 	showLabels?: boolean;
 
@@ -9,7 +8,7 @@ export interface BottomNavigationProps {
 	children: React.ReactNode;
 
 	/** Callback fired when the value changes. */
-	onChange?: ((event: object, value: number) => void);
+	onChange?: (event: object, value: number) => void;
 
 	/**
 	 * The value of the currently selected Tab. If you don't want any selected
