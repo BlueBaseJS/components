@@ -50,7 +50,7 @@ export function getComponent<T = any>(...keys: string[]) {
 
 		render() {
 			// Render
-			return this.Component? React.createElement(this.Component, this.props) : null;
+			return React.createElement(this.Component as React.ComponentType<any>, this.props);
 		}
 	};
 }
