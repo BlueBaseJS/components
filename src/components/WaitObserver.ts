@@ -34,6 +34,7 @@ export interface WaitObserverProps {
 	children?: MaybeRenderPropChildren<WaitObserverChildrenProps>;
 }
 
+// tslint:disable: jsdoc-format
 /**
  * # ⏰ WaitObserver
  *
@@ -47,13 +48,13 @@ export interface WaitObserverProps {
  *
  * ## Usage
  * ```jsx
- * <WaitObserver
- *  delay={1000}
- *  timeout={3000}
- *  onTimeout={onTimeout}
- *  onRetry={onRetry}
- *  children={(props: WaitObserverChildrenProps) => <LoadingState {...props} />}
- * />
- * ```
+<WaitObserver
+	delay={1000}
+	timeout={3000}
+	onTimeout={onTimeout}
+	onRetry={onRetry}
+>
+{(props: WaitObserverChildrenProps) => <LoadingState {...props} />}
+</WaitObserver>```
  */
 export const WaitObserver = getComponent<WaitObserverProps>('WaitObserver');
