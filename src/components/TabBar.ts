@@ -1,4 +1,4 @@
-// We follow TabBar from react-navigation
+// We follow TabBar from https://github.com/react-native-community/react-native-tab-view
 
 import { Animated, StyleProp, ViewStyle } from 'react-native';
 import { ReactNode } from 'react';
@@ -100,4 +100,11 @@ export type TabBarProps<T extends TabBarRouteBase = TabBarRouteBase> = SceneRend
 	style?: StyleProp<ViewStyle>;
 };
 
+/**
+ * # 🗂 TabBar
+ * A [TabView](https://github.com/react-native-community/react-native-tab-view)
+ * compatible TabBar component.
+ *
+ * Use with a navigator.
+ */
 export const TabBar = getComponent<TabBarProps>('TabBar');
