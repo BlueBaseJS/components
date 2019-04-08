@@ -2,7 +2,6 @@ import React from 'react';
 import { getComponent } from '../getComponent';
 
 export interface BlueBaseFilterProps<T = any> {
-
 	/** Event name */
 	filter: string;
 
@@ -13,12 +12,12 @@ export interface BlueBaseFilterProps<T = any> {
 	args?: { [key: string]: any };
 
 	/** Children as function (render prop pattern). Final value is passed as param to this function. */
-	children: ((value: any) => React.ReactNode);
+	children: (value: any) => React.ReactNode;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 }
 
 /**

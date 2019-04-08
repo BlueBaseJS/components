@@ -2,21 +2,19 @@ import { MaybeRenderPropChildren } from '../utils/Components';
 import { getComponent } from '../getComponent';
 
 export interface WaitObserverChildrenProps {
-
 	/** A flag that tells if a timeout has occured */
-	timedOut: boolean,
+	timedOut: boolean;
 
 	/** A function the resets timers */
-	retry: () => void
+	retry: () => void;
 }
 
 export interface WaitObserverProps {
-
 	/** Delay before rendering a component. */
-	delay?: number,
+	delay?: number;
 
 	/** Timeout duration. */
-	timeout?: number,
+	timeout?: number;
 
 	/**
 	 * A callback function executed when a timeout occurs.
@@ -28,10 +26,10 @@ export interface WaitObserverProps {
 	 */
 	onRetry?: () => void;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 
 	children?: MaybeRenderPropChildren<WaitObserverChildrenProps>;
 }

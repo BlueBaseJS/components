@@ -4,8 +4,10 @@ import { MaybeRenderPropChildren } from '../utils/Components';
 import { WaitObserverProps } from './WaitObserver';
 import { getComponent } from '../getComponent';
 
-export interface StatefulComponentProps extends DataObserverProps, ErrorObserverProps, WaitObserverProps {
-
+export interface StatefulComponentProps
+	extends DataObserverProps,
+		ErrorObserverProps,
+		WaitObserverProps {
 	// Components
 	component?: React.ComponentType<any>;
 	loadingComponent?: React.ComponentType<any>;
@@ -13,10 +15,10 @@ export interface StatefulComponentProps extends DataObserverProps, ErrorObserver
 
 	children?: MaybeRenderPropChildren;
 
-  /**
-   * Used to locate this view in end-to-end tests.
-   */
-	testID?: string,
+	/**
+	 * Used to locate this view in end-to-end tests.
+	 */
+	testID?: string;
 }
 
 /**

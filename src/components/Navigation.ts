@@ -2,23 +2,20 @@ import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { MaybeThunk } from '../utils/Thunks';
 import { getComponent } from '../getComponent';
 
-type renderFunction<T = any> = ((props: T) => React.ReactElement<T>);
+type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
 
 export interface NavigationOptions {
 	title?: string;
-	header?:
-	| React.ReactElement<any>
-	| renderFunction<any /*HeaderProps*/>
-	| null;
+	header?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	headerTransparent?: boolean;
 	headerTitle?: string | React.ReactElement<any>;
 	headerTitleStyle?: StyleProp<TextStyle>;
 	headerTitleAllowFontScaling?: boolean;
 	headerTintColor?: string;
 	headerLeft?:
-	| React.ReactElement<any>
-	| ((backButtonProps: any /*HeaderBackButtonProps*/) => React.ReactElement<any>)
-	| null;
+		| React.ReactElement<any>
+		| ((backButtonProps: any /*HeaderBackButtonProps*/) => React.ReactElement<any>)
+		| null;
 	headerBackTitle?: string | null;
 	headerBackImage?: React.ReactElement<any>;
 	headerTruncatedBackTitle?: string;
@@ -27,10 +24,7 @@ export interface NavigationOptions {
 	headerRight?: React.ReactElement<any> | null;
 	headerStyle?: StyleProp<ViewStyle>;
 	headerForceInset?: any /*HeaderForceInset*/;
-	headerBackground?:
-	| React.ReactElement<any>
-	| renderFunction<any /*HeaderProps*/>
-	| null;
+	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	gesturesEnabled?: boolean;
 	gestureResponseDistance?: { vertical?: number; horizontal?: number };
 	gestureDirection?: 'default' | 'inverted';
@@ -38,50 +32,48 @@ export interface NavigationOptions {
 }
 
 export interface RouteConfig {
-
 	/** Name of route */
-	name: string,
+	name: string;
 
 	/** Screen component */
-	screen?: React.ComponentType<any> | string,
+	screen?: React.ComponentType<any> | string;
 
 	/** URL */
-	path: string,
+	path: string;
 
 	/** Should route match exact path pattern? */
-	exact?: boolean,
+	exact?: boolean;
 
 	/** Navigation options */
-	navigationOptions?: MaybeThunk<NavigationOptions>,
+	navigationOptions?: MaybeThunk<NavigationOptions>;
 
 	/** FIXME: Experimental */
-	navigator?: NavigatorProps,
+	navigator?: NavigatorProps;
 
-	[key: string]: any,
+	[key: string]: any;
 }
 
 export interface NavigatorProps {
-
 	/**
 	 * Defaults to 'switch'
 	 */
-	type?: 'switch' | 'stack' | string,
+	type?: 'switch' | 'stack' | string;
 
 	/**
 	 * Routes
 	 */
-	routes: MaybeThunk<RouteConfig[]>,
+	routes: MaybeThunk<RouteConfig[]>;
 
 	/**
 	 * [Stack Navigator] Sets the default screen of the navigator.
 	 * Must match one of the keys in route configs.
 	 */
-	initialRouteName?: string,
+	initialRouteName?: string;
 
 	/**
 	 * Default navigation options to use for screens.
 	 */
-	defaultNavigationOptions?: MaybeThunk<NavigationOptions>,
+	defaultNavigationOptions?: MaybeThunk<NavigationOptions>;
 
 	/**
 	 * Defines the style for rendering and transitions:
@@ -90,7 +82,7 @@ export interface NavigatorProps {
 	 * - `modal` - Make the screens slide in from the bottom which is a common iOS pattern.
 	 * Only works on iOS, has no effect on Android.
 	 */
-	mode?: 'card' | 'modal',
+	mode?: 'card' | 'modal';
 
 	/**
 	 * Specifies how the header should be rendered:
@@ -101,19 +93,18 @@ export interface NavigatorProps {
 	 * out together with the screen. This is a common pattern on Android.
 	 * - `none` - No header will be rendered.
 	 */
-	headerMode?: 'float' | 'screen' | 'none',
+	headerMode?: 'float' | 'screen' | 'none';
 
-	[key: string]: any,
+	[key: string]: any;
 }
-
 
 /**
  * Props for the Router component
  */
 export interface NavigationProps {
-	navigator: NavigatorProps,
+	navigator: NavigatorProps;
 
-	[key: string]: any,
+	[key: string]: any;
 }
 
 export const Navigation = getComponent<NavigationProps>('Navigation');
