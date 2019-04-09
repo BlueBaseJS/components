@@ -9,4 +9,5 @@ module.exports = Object.assign(configs, {
     '!**/__stories__/**',
     '!**/components/**',
   ],
+  testMatch: undefined,
 });
