@@ -1,5 +1,5 @@
 import { NavigationActionParams } from './NavigationActions';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface RedirectProps {
 	routeName?: string;

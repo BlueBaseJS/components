@@ -1,6 +1,6 @@
 import { TextStyle, ViewStyle } from 'react-native';
 import React from 'react';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface ButtonStyles {
 	root: ViewStyle;
@@ -19,6 +19,9 @@ export interface ButtonStyles {
 export interface ButtonProps {
 	/* Label to be passed as child. */
 	children?: React.ReactNode;
+
+	/** Ignored if children prop is provided. Otherwise this string is used. */
+	title?: string;
 
 	/* Color prop of type enum. */
 	color?: 'primary' | 'secondary' | 'default';
@@ -52,6 +55,11 @@ export interface ButtonProps {
 	styles?: ButtonStyles;
 
 	/**
+	 * Whether to show a loading indicator.
+	 */
+	loading?: boolean;
+
+	/**
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
@@ -60,3 +68,14 @@ export interface ButtonProps {
 }
 
 export const Button = getComponent<ButtonProps>('Button');
+
+/**
+ * Default props for TextInput component
+ */
+export const ButtonDefaultProps: Partial<ButtonProps> = {
+	color: 'primary',
+	fullWidth: false,
+	loading: false,
+	size: 'medium',
+	variant: 'contained',
+};

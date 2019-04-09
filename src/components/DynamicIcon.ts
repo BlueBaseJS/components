@@ -1,6 +1,6 @@
 import { ImageSourcePropType } from 'react-native';
 import React from 'react';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface DynamicIconProps {
 	/**

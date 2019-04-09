@@ -1,6 +1,6 @@
 import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
 import { NavigationActionParams } from './NavigationActions';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface LinkProps {
 	routeName?: string;

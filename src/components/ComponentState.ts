@@ -2,7 +2,7 @@ import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 import { ButtonProps } from './Button';
 import { ImageProps } from './Image';
 import React from 'react';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface ComponentStateStyles {
 	/** Action button container styles */

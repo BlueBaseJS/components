@@ -1,5 +1,5 @@
 import { TextProps } from './Text';
-import { getComponent } from '@bluebase/core';
+import { getComponent } from '../getComponent';
 
 export interface Subtitle2Props extends TextProps {}
 
