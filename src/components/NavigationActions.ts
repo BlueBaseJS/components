@@ -9,7 +9,7 @@ export interface NavitionActionRouteNamePayload {
 	params?: NavigationActionParams;
 }
 
-export interface NavitionActionPathPayload {
+export interface NavigationActionPathPayload {
 	path: string;
 	params?: NavigationActionParams;
 }
@@ -17,7 +17,7 @@ export interface NavitionActionPathPayload {
 export type NavigationActionPayload =
 	| string
 	| NavitionActionRouteNamePayload
-	| NavitionActionPathPayload;
+	| NavigationActionPathPayload;
 
 export interface NavigationActionsObject {
 	navigate: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void;
