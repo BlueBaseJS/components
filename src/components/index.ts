@@ -54,7 +54,6 @@ export * from './Subtitle1';
 export * from './Subtitle2';
 export * from './Switch';
 export * from './Tab';
-export * from './TabBar';
 export * from './Tabs';
 export * from './TextInput';
 export * from './Text';
