@@ -5,6 +5,9 @@ export interface TabProps {
 	/** If true, the tab will be disabled. */
 	disabled?: boolean;
 
+	/** If true, the tab will be active. */
+	selected?: boolean;
+
 	/** Dynamic Icon Props */
 	icon?: DynamicIconProps;
 
