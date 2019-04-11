@@ -120,6 +120,7 @@ export interface DrawerLayoutProps extends ViewProps {
 
 export const DrawerLayoutDefaultProps = {
 	drawerPosition: 'left' as DrawerLayoutProps['drawerPosition'],
+	open: false,
 };
 
 export const DrawerLayout = getComponent<DrawerLayoutProps>('DrawerLayout');
