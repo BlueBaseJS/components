@@ -1,9 +1,9 @@
 import { StyleProp, ViewStyle } from 'react-native';
-import { getComponent } from '../getComponent';
-import { CardHeader } from './CardHeader';
+import { CardActions } from './CardActions';
 import { CardContent } from './CardContent';
 import { CardCover } from './CardCover';
-import { CardActions } from './CardActions';
+import { CardHeader } from './CardHeader';
+import { getComponent } from '../getComponent';
 
 export interface CardProps {
 	/** Function to execute on press. */
