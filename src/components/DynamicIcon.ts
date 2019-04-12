@@ -32,7 +32,7 @@ export interface DynamicIconProps {
 	source?: ImageSourcePropType;
 
 	/**
-	 * Icon size. Defaults to 100
+	 * Icon size. Defaults to 40
 	 */
 	size?: number;
 
@@ -44,6 +44,7 @@ export interface DynamicIconProps {
 	[key: string]: any;
 }
 
+// tslint:disable: jsdoc-format
 /**
  * # 🗿 DynamicIcon
  *
@@ -53,8 +54,12 @@ export interface DynamicIconProps {
  * - A custom component
  *
  * ## Usage
- * ```jsx
- * <DynamicIcon type="image" size={250} source={{ uri: 'https://picsum.photos/200' }} />
- * ```
+```jsx
+<DynamicIcon
+	type="image"
+	size={250}
+	source={{ uri: 'https://picsum.photos/200' }}
+/>
+```
  */
 export const DynamicIcon = getComponent<DynamicIconProps>('DynamicIcon');
