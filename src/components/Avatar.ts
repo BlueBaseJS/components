@@ -2,7 +2,6 @@ import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
 import { getComponent } from '../getComponent';
 
 export interface AvatarProps {
-
 	/**
 	 * Type of Avatar. We currently support 3 types:
 	 *
@@ -32,7 +31,7 @@ export interface AvatarProps {
 	 * Used when type is 'image'.
 	 * This is the Image source.
 	 */
-	image?: ImageSourcePropType
+	image?: ImageSourcePropType;
 
 	/**
 	 * Used when type is 'text'.
@@ -44,10 +43,8 @@ export interface AvatarProps {
 }
 
 export const AvatarDefaultProps = {
-	size: 56
+	size: 56,
 };
-
-
 
 // tslint:disable: jsdoc-format
 /**
