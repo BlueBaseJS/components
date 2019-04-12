@@ -1,4 +1,5 @@
 export * from './ActivityIndicator';
+export * from './Avatar';
 export * from './BlueBaseFilter';
 export * from './Body1';
 export * from './Body2';
