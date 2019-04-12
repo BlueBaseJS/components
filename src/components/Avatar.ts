@@ -1,34 +1,68 @@
-import { ImageProperties, ImageSourcePropType, } from 'react-native';
+import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
 import { getComponent } from '../getComponent';
 
-export interface AvatarProps extends ImageProperties {
-	/**
-	 * If provided,the component will display image.
-	 */
-	source?: ImageSourcePropType;
+export interface AvatarProps {
 
-  /**
-   * It provides the  size of the avatar.
-   */
+	/**
+	 * Type of Avatar. We currently support 3 types:
+	 *
+	 * - Image (default)
+	 * - Icon
+	 * - Text
+	 */
+	type: 'image' | 'icon' | 'text';
+
+	/**
+	 * Size of avatar. Defaults: 56
+	 */
 	size?: number;
 
-  /**
-   * It is used to style the avatar.
-   */
-	style?: object;
+	/**
+	 * Custom color of text or icon.
+	 */
+	color?: string;
 
-  /**
-   * It is used to render the avatar in web.
-   */
-	children?: object;
+	/**
+	 * Used when type is 'icon'.
+	 * This is the name prop of the Icon component
+	 */
+	icon?: string;
 
-  /**
-   * It is used to render the  root node.
-   */
+	/**
+	 * Used when type is 'image'.
+	 * This is the Image source.
+	 */
+	image?: ImageSourcePropType
 
-	component?: object;
+	/**
+	 * Used when type is 'text'.
+	 * This is the Image source.
+	 */
+	text?: ImageSourcePropType;
+
+	style?: StyleProp<ViewStyle>;
 }
 
+export const AvatarDefaultProps = {
+	size: 56
+};
 
+
+
+// tslint:disable: jsdoc-format
+/**
+ * # 🤠 Avatar
+ *
+ * Avatar component.
+ *
+ * ## Usage
+```jsx
+<DynamicIcon
+	type="image"
+	size={250}
+	source={{ uri: 'https://picsum.photos/200' }}
+/>
+```
+ */
 export const Avatar = getComponent<AvatarProps>('Avatar');
-
+Avatar.defaultProps = AvatarDefaultProps;
