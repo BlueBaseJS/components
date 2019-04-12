@@ -5,7 +5,7 @@ export interface AvatarProps extends ImageProperties {
 	/**
 	 * If provided,the component will display image.
 	 */
-	source?: ImageSourcePropType;
+	source: ImageSourcePropType;
 
   /**
    * It provides the  size of the avatar.
@@ -23,10 +23,16 @@ export interface AvatarProps extends ImageProperties {
 	children?: object;
 
   /**
-   * It is used to render the  root node.
+   * It is used to render the  root node for web only.
    */
 
 	component?: object;
+
+  /**
+   * It is used to provide alt or tooltip for images for web only.
+   */
+
+	alt?: string
 }
 
 
