@@ -2,7 +2,6 @@ import { StyleProp, ViewStyle } from 'react-native';
 import { getComponent } from '../getComponent';
 
 export interface CardHeaderProps {
-
 	/** Text for the title. */
 	title?: React.ReactNode;
 

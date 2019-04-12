@@ -6,7 +6,6 @@ import { CardCover } from './CardCover';
 import { CardActions } from './CardActions';
 
 export interface CardProps {
-
 	/** Function to execute on press. */
 	onPress?: () => void;
 
@@ -15,7 +14,6 @@ export interface CardProps {
 
 	children: React.ReactNode;
 	style?: StyleProp<ViewStyle>;
-
 }
 
 export const CardDefaultProps = {};
