@@ -23,7 +23,7 @@ export interface MenuProps {
 	 */
 	children: React.ReactNode;
 
-	style: StyleProp<ViewStyle>;
+	style?: StyleProp<ViewStyle>;
 }
 
 type MenuType = React.ComponentType<MenuProps> & { Item: React.ComponentType<MenuItemProps> };

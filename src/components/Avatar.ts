@@ -1,5 +1,6 @@
 import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
 import { getComponent } from '../getComponent';
+import { ReactNode } from 'react';
 
 export interface AvatarProps {
 	/**
@@ -25,7 +26,7 @@ export interface AvatarProps {
 	 * Used when type is 'icon'.
 	 * This is the name prop of the Icon component
 	 */
-	icon?: string;
+	icon?: ReactNode;
 
 	/**
 	 * Used when type is 'image'.
