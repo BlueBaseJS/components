@@ -49,6 +49,7 @@ export * from './NavigationActions';
 export * from './Noop';
 export * from './Overline';
 export * from './PluginIcon';
+export * from './ProgressBar';
 export * from './Picker';
 export * from './PickerItem';
 export * from './Radio';
