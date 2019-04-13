@@ -56,6 +56,7 @@ export * from './Radio';
 export * from './RadioGroup';
 export * from './Redirect';
 export * from './Slider';
+export * from './Snackbar';
 export * from './StatefulComponent';
 export * from './Subtitle1';
 export * from './Subtitle2';
