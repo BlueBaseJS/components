@@ -1,6 +1,6 @@
 import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
-import { getComponent } from '../getComponent';
 import { ReactNode } from 'react';
+import { getComponent } from '../getComponent';
 
 export interface AvatarProps {
 	/**
