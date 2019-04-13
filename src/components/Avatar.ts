@@ -35,9 +35,9 @@ export interface AvatarProps {
 
 	/**
 	 * Used when type is 'text'.
-	 * This is the Image source.
+	 * This is the text that is displayed
 	 */
-	text?: ImageSourcePropType;
+	text?: string;
 
 	style?: StyleProp<ViewStyle>;
 }
