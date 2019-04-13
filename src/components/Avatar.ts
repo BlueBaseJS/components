@@ -50,15 +50,12 @@ export const AvatarDefaultProps = {
 /**
  * # 🤠 Avatar
  *
- * Avatar component.
+ * Avatar control enables users to add images, icons or initials
+ * within any application for instances such as a profile pictures.
  *
  * ## Usage
 ```jsx
-<DynamicIcon
-	type="image"
-	size={250}
-	source={{ uri: 'https://picsum.photos/200' }}
-/>
+<Avatar type="image" image={{ uri: 'https://picsum.photos/200' }} />
 ```
  */
 export const Avatar = getComponent<AvatarProps>('Avatar');
