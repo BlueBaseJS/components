@@ -49,6 +49,8 @@ export * from './ListItem';
 export * from './ListSection';
 export * from './ListSubheader';
 export * from './LoadingState';
+export * from './Menu';
+export * from './MenuItem';
 export * from './Navigation';
 export * from './NavigationActions';
 export * from './Noop';
