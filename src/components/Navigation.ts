@@ -47,7 +47,7 @@ export interface RouteConfig {
 	/** Navigation options */
 	navigationOptions?: MaybeThunk<NavigationOptions>;
 
-	/** FIXME: Experimental */
+	/** Child Navigator */
 	navigator?: NavigatorProps;
 
 	[key: string]: any;
