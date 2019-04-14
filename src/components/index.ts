@@ -2,6 +2,7 @@ export * from './ActivityIndicator';
 export * from './Avatar';
 export * from './Badge';
 export * from './BlueBaseFilter';
+export * from './BlueBaseImage';
 export * from './Body1';
 export * from './Body2';
 export * from './Button';
