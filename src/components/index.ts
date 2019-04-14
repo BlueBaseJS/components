@@ -30,6 +30,7 @@ export * from './DynamicIcon';
 export * from './EmptyState';
 export * from './ErrorObserver';
 export * from './ErrorState';
+export * from './FormattedMessage';
 export * from './H1';
 export * from './H2';
 export * from './H3';
