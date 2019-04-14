@@ -1,7 +1,7 @@
-import { ImageProps } from 'react-native';
+import { BlueBaseImageProps } from './BlueBaseImage';
 import { getComponent } from '../getComponent';
 
-export interface CardCoverProps extends ImageProps {}
+export interface CardCoverProps extends BlueBaseImageProps {}
 
 export const CardCoverDefaultProps = {};
 

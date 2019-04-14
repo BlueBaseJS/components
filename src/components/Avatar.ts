@@ -1,4 +1,5 @@
-import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
+import { StyleProp, ViewStyle } from 'react-native';
+import { BlueBaseImageProps } from './BlueBaseImage';
 import { getComponent } from '../getComponent';
 
 export interface AvatarProps {
@@ -31,7 +32,7 @@ export interface AvatarProps {
 	 * Used when type is 'image'.
 	 * This is the Image source.
 	 */
-	image?: ImageSourcePropType;
+	image?: BlueBaseImageProps['source'];
 
 	/**
 	 * Used when type is 'text'.

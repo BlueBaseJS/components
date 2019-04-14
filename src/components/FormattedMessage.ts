@@ -8,7 +8,7 @@ export interface FormattedMessageProps extends TextProps {
 
 // tslint:disable: jsdoc-format
 /**
- *  🈯️ FormattedMessage
+ * 🈯️ FormattedMessage
  *
  * Converts text message based on the current locale.
  *

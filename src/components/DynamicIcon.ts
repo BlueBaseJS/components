@@ -1,4 +1,4 @@
-import { ImageSourcePropType } from 'react-native';
+import { BlueBaseImageProps } from './BlueBaseImage';
 import React from 'react';
 import { getComponent } from '../getComponent';
 
@@ -29,7 +29,7 @@ export interface DynamicIconProps {
 	 * Used when type is 'image'.
 	 * This is the Image source.
 	 */
-	source?: ImageSourcePropType;
+	source?: BlueBaseImageProps['source'];
 
 	/**
 	 * Icon size. Defaults to 40

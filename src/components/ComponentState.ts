@@ -1,6 +1,6 @@
 import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+import { BlueBaseImageProps } from './BlueBaseImage';
 import { ButtonProps } from './Button';
-import { ImageProps } from './Image';
 import React from 'react';
 import { getComponent } from '../getComponent';
 
@@ -47,7 +47,7 @@ export interface ComponentStateProps {
 	/**
 	 * Image source
 	 */
-	imageSource?: ImageProps['source'];
+	imageSource?: BlueBaseImageProps['source'];
 
 	/**
 	 * Title text
