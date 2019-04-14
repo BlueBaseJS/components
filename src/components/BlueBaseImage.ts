@@ -3,8 +3,8 @@ import { ImageProps } from './Image';
 
 export interface BlueBaseImageProps extends Omit<ImageProps, 'source'> {
 	/** BlueBase registry key */
-	resolve?: string | string[]
-	source?: ImageProps['source']
+	resolve?: string | string[];
+	source?: ImageProps['source'];
 }
 
 // tslint:disable: jsdoc-format
