@@ -74,5 +74,6 @@ export * from './Tab';
 export * from './Tabs';
 export * from './TextInput';
 export * from './Text';
+export * from './TouchableItem';
 export * from './View';
 export * from './WaitObserver';
