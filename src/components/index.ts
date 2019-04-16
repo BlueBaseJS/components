@@ -45,6 +45,7 @@ export * from './HeaderTitle';
 export * from './HoverObserver';
 export * from './Icon';
 export * from './Image';
+export * from './ImageBackground';
 export * from './Link';
 export * from './ListAccordion';
 export * from './ListAvatar';
