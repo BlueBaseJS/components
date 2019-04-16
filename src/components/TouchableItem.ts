@@ -2,8 +2,8 @@ import { TouchableNativeFeedbackProps, TouchableOpacityProps } from 'react-nativ
 import { getComponent } from '../getComponent';
 
 export interface TouchableItemProps extends TouchableNativeFeedbackProps, TouchableOpacityProps {
-	borderless?: boolean,
-	pressColor?: string,
+	borderless?: boolean;
+	pressColor?: string;
 }
 
 export const TouchableItemDefaultProps = {

@@ -7,10 +7,10 @@ export interface RowStyles {
 }
 
 export interface RowProps extends ViewProps {
-	alignItems?: ViewStyle['alignItems'],
-	justifyContent?: ViewStyle['justifyContent'],
-	nowrap?: boolean,
-	rowSize?: number,
+	alignItems?: ViewStyle['alignItems'];
+	justifyContent?: ViewStyle['justifyContent'];
+	nowrap?: boolean;
+	rowSize?: number;
 }
 
 /**

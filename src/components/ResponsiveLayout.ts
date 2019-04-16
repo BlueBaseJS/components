@@ -1,7 +1,6 @@
 import { getComponent } from '@bluebase/core';
 
 export interface ResponsiveLayoutProps {
-
 	/**
 	 * The default component to render, if a current size component is not given.
 	 */
