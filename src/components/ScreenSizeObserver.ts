@@ -6,10 +6,6 @@ export interface ScreenSizeObserverProps {
 	children: RenderPropChildren<SCREEN_SIZE>;
 }
 
-export interface ScreenSizeObserverState {
-	readonly size: SCREEN_SIZE;
-}
-
 /**
  * # 🖥 Observes changes in Screen Size
  */

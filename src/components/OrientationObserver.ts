@@ -1,11 +1,7 @@
 import { RenderPropChildren, getComponent } from '@bluebase/core';
 
 export interface OrientationObserverProps {
-	children: RenderPropChildren<OrientationObserverState>;
-}
-
-export interface OrientationObserverState {
-	isLandscape: boolean;
+	children: RenderPropChildren<boolean>;
 }
 
 /**
