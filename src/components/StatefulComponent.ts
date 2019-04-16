@@ -2,7 +2,7 @@ import { DataObserverProps } from './DataObserver';
 import { ErrorObserverProps } from './ErrorObserver';
 import { MaybeRenderPropChildren } from '../utils/Components';
 import { WaitObserverProps } from './WaitObserver';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface StatefulComponentProps
 	extends DataObserverProps,

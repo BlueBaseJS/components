@@ -1,6 +1,6 @@
 import { StyleProp, ViewStyle } from 'react-native';
 import { DynamicIconProps } from './DynamicIcon';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface MenuItemProps {
 	/** Title text for the MenuItem. */

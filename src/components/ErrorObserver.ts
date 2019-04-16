@@ -1,5 +1,5 @@
 import { MaybeRenderPropChildren } from '../utils/Components';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface ErrorObserverProps {
 	/** If an error is passed as a prop, shows an error state. */

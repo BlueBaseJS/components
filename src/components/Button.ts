@@ -1,6 +1,6 @@
 import { TextStyle, ViewStyle } from 'react-native';
 import React from 'react';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface ButtonStyles {
 	root: ViewStyle;
