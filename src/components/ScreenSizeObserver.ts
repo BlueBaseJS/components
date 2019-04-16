@@ -3,7 +3,7 @@ import { RenderPropChildren, getComponent } from '@bluebase/core';
 export type SCREEN_SIZE = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface ScreenSizeObserverProps {
-	children: RenderPropChildren<SCREEN_SIZE>
+	children: RenderPropChildren<SCREEN_SIZE>;
 }
 
 export interface ScreenSizeObserverState {
