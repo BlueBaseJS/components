@@ -100,4 +100,4 @@ export interface ColumnProps extends ViewProps {
  *
  * Grid Column
  */
-export const Column = getComponent<ColumnProps & { styles: ColumnStyles }>('Column');
+export const Column = getComponent<ColumnProps & { styles?: ColumnStyles }>('Column');

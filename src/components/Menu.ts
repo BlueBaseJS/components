@@ -6,24 +6,24 @@ export interface MenuProps {
 	/**
 	 * Whether the Menu is currently visible.
 	 */
-	visible: boolean;
+	visible?: boolean;
 
 	/**
 	 * The anchor to open the menu from. In most cases, it will be a button that opens the manu.
 	 */
-	anchor: React.ReactNode;
+	anchor?: React.ReactNode;
 
 	/**
 	 * Callback called when Menu is dismissed. The `visible` prop needs to be updated when this is called.
 	 */
-	onDismiss: () => void;
+	onDismiss?: () => void;
 
 	/**
 	 * Content of the `Menu`.
 	 */
 	children: React.ReactNode;
 
-	style: StyleProp<ViewStyle>;
+	style?: StyleProp<ViewStyle>;
 }
 
 type MenuType = React.ComponentType<MenuProps> & { Item: React.ComponentType<MenuItemProps> };

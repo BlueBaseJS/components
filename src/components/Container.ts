@@ -13,4 +13,4 @@ export interface ContainerProps extends ViewProps {}
  *
  * Grid Container
  */
-export const Container = getComponent<ContainerProps & { styles: ContainerStyles }>('Container');
+export const Container = getComponent<ContainerProps & { styles?: ContainerStyles }>('Container');

@@ -18,4 +18,4 @@ export interface RowProps extends ViewProps {
  *
  * Grid Row
  */
-export const Row = getComponent<RowProps & { styles: RowStyles }>('Row');
+export const Row = getComponent<RowProps & { styles?: RowStyles }>('Row');
