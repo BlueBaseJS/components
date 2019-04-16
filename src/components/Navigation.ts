@@ -1,6 +1,6 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { MaybeThunk } from '../utils/Thunks';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
 

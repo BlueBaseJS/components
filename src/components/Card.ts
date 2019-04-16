@@ -3,7 +3,7 @@ import { CardActions } from './CardActions';
 import { CardContent } from './CardContent';
 import { CardCover } from './CardCover';
 import { CardHeader } from './CardHeader';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface CardProps {
 	/** Function to execute on press. */

@@ -1,5 +1,5 @@
 import { TouchableNativeFeedbackProps, TouchableOpacityProps } from 'react-native';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface TouchableItemProps extends TouchableNativeFeedbackProps, TouchableOpacityProps {
 	borderless?: boolean;

@@ -1,6 +1,5 @@
-import { Omit } from '@bluebase/core';
+import { Omit, getComponent } from '@bluebase/core';
 import { SwitchProps as NativeSwitchProps } from 'react-native';
-import { getComponent } from '../getComponent';
 
 export interface SwitchProps extends Omit<NativeSwitchProps, 'value' | 'onValueChange'> {
 	/**

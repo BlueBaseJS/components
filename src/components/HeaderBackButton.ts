@@ -1,5 +1,5 @@
 import { ImageStyle, StyleProp, TextStyle, ViewStyle } from 'react-native';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface HeaderBackButtonStyles {
 	androidButtonWrapper: StyleProp<ViewStyle>;

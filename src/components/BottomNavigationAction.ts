@@ -1,5 +1,5 @@
 import { DynamicIconProps } from './DynamicIcon';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface BottomNavigationActionProps {
 	/** If true, the BottomNavigationAction will show its label. */

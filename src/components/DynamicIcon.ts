@@ -1,6 +1,6 @@
 import { BlueBaseImageProps } from './BlueBaseImage';
 import React from 'react';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface DynamicIconProps {
 	/**

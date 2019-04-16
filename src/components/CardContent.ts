@@ -1,5 +1,5 @@
 import { StyleProp, ViewStyle } from 'react-native';
-import { getComponent } from '../getComponent';
+import { getComponent } from '@bluebase/core';
 
 export interface CardContentProps {
 	children: React.ReactNode;

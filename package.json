@@ -30,7 +30,7 @@
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
     "test": "run-s build test:*",
-    "test:only": "jest --coverage",
+    "test_:only": "jest --coverage",
     "test:lint": "npm run lint",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
     "commit": "git-cz",
