@@ -11,7 +11,6 @@ export interface CardHeaderProps {
 	left?: React.ReactNode;
 	right?: React.ReactNode;
 
-	children: React.ReactNode;
 	style?: StyleProp<ViewStyle>;
 }
 
