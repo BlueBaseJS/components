@@ -4,7 +4,7 @@ import { getComponent } from '@bluebase/core';
 export interface ListIconProps extends IconProps {}
 
 export const ListIconDefaultProps: Partial<ListIconProps> = {
-	size: 24
+	size: 24,
 };
 
 /**

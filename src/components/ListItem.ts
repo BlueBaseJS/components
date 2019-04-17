@@ -1,7 +1,6 @@
 import { getComponent } from '@bluebase/core';
 
 export interface ListItemProps {
-
 	/**
 	 * Title text for the list item.
 	 */
