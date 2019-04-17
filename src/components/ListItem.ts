@@ -36,7 +36,19 @@ export interface ListItemProps {
 	 * Is the list item disabled
 	 */
 	disabled?: boolean;
+
+	/**
+	 * If true, the title and description will be indented.
+	 * This should be used if there is no left avatar or left icon.
+	 */
+	inset?: boolean;
 }
+
+export const ListItemDefaultProps = {
+	disabled: false,
+	inset: false,
+	selected: false,
+};
 
 /**
  * 📚 ListItem
@@ -44,3 +56,5 @@ export interface ListItemProps {
  * A component to show tiles inside a List.
  */
 export const ListItem = getComponent<ListItemProps>('ListItem');
+
+ListItem.defaultProps = ListItemDefaultProps;
