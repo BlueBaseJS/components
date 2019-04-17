@@ -48,7 +48,6 @@ export * from './Image';
 export * from './ImageBackground';
 export * from './Link';
 export * from './List';
-export * from './ListAccordion';
 export * from './ListAvatar';
 export * from './ListIcon';
 export * from './ListItem';
