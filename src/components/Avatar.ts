@@ -1,4 +1,3 @@
-import { StyleProp, ViewStyle } from 'react-native';
 import { BlueBaseImageProps } from './BlueBaseImage';
 import { getComponent } from '@bluebase/core';
 
@@ -40,7 +39,7 @@ export interface AvatarProps {
 	 */
 	text?: string;
 
-	style?: StyleProp<ViewStyle>;
+	style?: any;
 }
 
 export const AvatarDefaultProps = {
