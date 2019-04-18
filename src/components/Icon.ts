@@ -1,8 +1,13 @@
 import { getComponent } from '@bluebase/core';
 
 export interface IconProps {
+	/** Size of the icon. */
 	size?: number;
+
+	/** Icon to display. */
 	name?: string;
+
+	/** Color of the icon. */
 	color?: string;
 }
 
