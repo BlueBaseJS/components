@@ -44,6 +44,7 @@ export * from './HeaderBackButton';
 export * from './HeaderTitle';
 export * from './HoverObserver';
 export * from './Icon';
+export * from './IconButton';
 export * from './Image';
 export * from './ImageBackground';
 export * from './Link';
