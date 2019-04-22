@@ -2,9 +2,15 @@ import { Omit, getComponent } from '@bluebase/core';
 import { ImageProps } from './Image';
 
 export interface BlueBaseImageProps extends Omit<ImageProps, 'source'> {
-	/** BlueBase registry key */
+	/**
+	 * BlueBase registry key
+	 *
+	 * @deprecated
+	 */
 	resolve?: string | string[];
-	source?: ImageProps['source'];
+
+	/** Image source or BlueBase registry key */
+	source?: ImageProps['source'] | string | string[];
 }
 
 // tslint:disable: jsdoc-format
