@@ -2,6 +2,7 @@ import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 import { BlueBaseImageProps } from './BlueBaseImage';
 import { ButtonProps } from './Button';
 import React from 'react';
+import { TextProps } from './Text';
 import { getComponent } from '@bluebase/core';
 
 export interface ComponentStateStyles {
@@ -25,12 +26,17 @@ export interface ComponentStateStyles {
 }
 export interface ComponentStateProps {
 	/**
-	 * Action title
+	 * Action button title
 	 */
 	actionTitle?: string;
 
 	/**
-	 * Action onPress callback function
+	 * Action button onPress callback function
+	 */
+	actionProps?: ButtonProps;
+
+	/**
+	 * Action button onPress callback function
 	 */
 	actionOnPress?: ButtonProps['onPress'];
 
@@ -40,9 +46,19 @@ export interface ComponentStateProps {
 	description?: string;
 
 	/**
+	 * Description Text props
+	 */
+	descriptionProps?: TextProps;
+
+	/**
 	 * A ReactNode to show custom UI, if provided, imageSource will be ignored
 	 */
 	image?: React.ReactNode;
+
+	/**
+	 * Image source
+	 */
+	imageProps?: BlueBaseImageProps;
 
 	/**
 	 * Image source
@@ -53,6 +69,11 @@ export interface ComponentStateProps {
 	 * Title text
 	 */
 	title?: string;
+
+	/**
+	 * Title text props
+	 */
+	titleProps?: TextProps;
 
 	styles?: ComponentStateStyles;
 
