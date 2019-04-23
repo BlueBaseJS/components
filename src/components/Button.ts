@@ -24,7 +24,7 @@ export interface ButtonProps {
 	title?: string;
 
 	/* Color prop of type enum. */
-	color?: 'primary' | 'secondary' | 'default';
+	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/** Button variant */
 	variant?: 'text' | 'outlined' | 'contained';

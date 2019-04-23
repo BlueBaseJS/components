@@ -19,7 +19,7 @@ export interface AvatarProps {
 	/**
 	 * Custom color of text or icon.
 	 */
-	color?: string;
+	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * Used when type is 'icon'.

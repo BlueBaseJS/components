@@ -3,7 +3,7 @@ import { getComponent } from '@bluebase/core';
 
 export interface TouchableItemProps extends TouchableNativeFeedbackProps, TouchableOpacityProps {
 	borderless?: boolean;
-	pressColor?: string;
+	pressColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 }
 
 export const TouchableItemDefaultProps = {

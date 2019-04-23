@@ -10,7 +10,7 @@ export interface SwitchProps extends Omit<NativeSwitchProps, 'value' | 'onValueC
 	/**
 	 * Color of the switch.
 	 */
-	color?: 'primary' | 'secondary' | 'default' | string;
+	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * The text to be used in an enclosing label element.
