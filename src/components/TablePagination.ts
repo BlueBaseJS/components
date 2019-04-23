@@ -21,7 +21,11 @@ export interface TablePaginationProps {
 	 * Function to execute on page change.
 	 */
 	onPageChange: (page: number) => void;
+	/**
+	 * The total number of rows.
+	 */
 
+	count: number;
 	children: React.ReactNode;
 	style?: StyleProp<ViewStyle>;
 }
