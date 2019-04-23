@@ -10,7 +10,7 @@ export interface CheckboxProps extends ViewProps {
 	/**
 	 * Color of the Checkbox.
 	 */
-	color?: 'primary' | 'secondary' | 'default' | string;
+	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * If true the user won't be able to toggle the Checkbox.

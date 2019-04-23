@@ -8,7 +8,7 @@ export interface IconProps {
 	name?: string;
 
 	/** Color of the icon. */
-	color?: string;
+	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 }
 
 export const IconDefaultProps: Partial<IconProps> = {

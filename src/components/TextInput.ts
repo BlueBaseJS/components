@@ -78,7 +78,7 @@ export interface TextInputProps extends RNTextInputProps {
  * auto-capitalization, placeholder text, and different keyboard types, such
  * as a numeric keypad.
  */
-export const TextInput = getComponent<TextInputProps>('Text');
+export const TextInput = getComponent<TextInputProps>('TextInput');
 
 /**
  * Default props for TextInput component

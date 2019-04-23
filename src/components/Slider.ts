@@ -6,18 +6,18 @@ export interface SliderProps extends NativeSliderProps {
 	 * The color used for the track to the right of the button.
 	 * Overrides the default blue gradient image.
 	 */
-	maximumTrackTintColor?: 'primary' | 'secondary' | 'default' | string;
+	maximumTrackTintColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * The color used for the track to the left of the button.
 	 * Overrides the default blue gradient image.
 	 */
-	minimumTrackTintColor?: 'primary' | 'secondary' | 'default' | string;
+	minimumTrackTintColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * Color of the foreground switch grip.
 	 */
-	thumbTintColor?: 'primary' | 'secondary' | 'default' | string;
+	thumbTintColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * If `true`, the label will be displayed in an error state.

@@ -8,7 +8,7 @@ export interface TabsProps {
 	children: React.ReactNode;
 
 	/** Determines the color of the indicator. */
-	indicatorColor?: 'primary' | 'secondary';
+	indicatorColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/** Callback fired when the value changes. */
 	onChange?: (event: object, value: number) => void;
