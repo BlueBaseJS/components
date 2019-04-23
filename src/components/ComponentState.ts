@@ -52,7 +52,7 @@ export interface ComponentStateProps {
 	/**
 	 * Title text
 	 */
-	title?: string;
+	title?: React.ReactNode;
 
 	styles?: ComponentStateStyles;
 
