@@ -12,7 +12,6 @@ export interface TablePaginationProps {
 	 */
 	numberOfPages: number;
 
-
 	/**
 	 * Label text to display
 	 */
@@ -22,8 +21,8 @@ export interface TablePaginationProps {
 	 * Function to execute on page change.
 	 */
 	onPageChange: (page: number) => void;
-	count: number,
-	Rowsperpage: (count: number, numberofRows: number) => void
+	count: number;
+	Rowsperpage: (count: number, numberofRows: number) => void;
 	children: React.ReactNode;
 	style?: StyleProp<ViewStyle>;
 }
