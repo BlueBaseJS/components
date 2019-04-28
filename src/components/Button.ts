@@ -1,4 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
+import { DynamicIconProps } from './DynamicIcon';
 import React from 'react';
 import { getComponent } from '@bluebase/core';
 
@@ -58,6 +59,17 @@ export interface ButtonProps {
 	 * Whether to show a loading indicator.
 	 */
 	loading?: boolean;
+
+	/**
+	 * Icon to display for the Button.
+	 */
+	icon?: DynamicIconProps;
+
+	/**
+	 * Whether the color is a dark color. A dark button will render light
+	 * text and vice-versa. Only applicable for contained mode.
+	 */
+	dark?: boolean;
 
 	/**
 	 * Used to locate this view in end-to-end tests.
