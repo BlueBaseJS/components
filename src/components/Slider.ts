@@ -38,6 +38,11 @@ export interface SliderProps extends NativeSliderProps {
 	 * If `true`, the label is displayed as required and the input will be required.
 	 */
 	required?: boolean;
+
+	/**
+	 * If `true`, the component will display value
+	 */
+	showValue?: boolean;
 }
 
 export const Slider = getComponent<SliderProps>('Slider');
