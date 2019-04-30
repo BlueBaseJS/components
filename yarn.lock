@@ -860,12 +860,12 @@
     tslint-react "^3.6.0"
     typescript "^3.1.4"
 
-"@bluebase/core@^4.0.0-aplha.10":
-  version "4.0.0-aplha.10"
-  resolved "https://registry.yarnpkg.com/@bluebase/core/-/core-4.0.0-aplha.10.tgz#649de87717aa30fbc72da53a83598cf8476fd132"
-  integrity sha512-6wG4ioMiLXkU1+Jl72wemm5l6NnEzR2ySCzAm70akmWQsybMk2u5lp/ApSu4enlnQHUGD3Lbxtpgha0l2SAa6Q==
+"@bluebase/core@^4.0.0-aplha.24":
+  version "4.0.0-aplha.24"
+  resolved "https://registry.yarnpkg.com/@bluebase/core/-/core-4.0.0-aplha.24.tgz#78ac1519adb99814ae1237a8d55b35d66b13b18a"
+  integrity sha512-ZQMv1r8TzNh934lRgkA8tQYTDrFtyDPU06l6ob7NHFZ6kruacRgWj2MFtmPPcJc4hm+ECScTEUmUItGsiSH5JA==
   dependencies:
-    deepmerge "^3.0.0"
+    deepmerge "^3.2.0"
     hoist-non-react-statics "^3.3.0"
     lodash.flowright "^3.5.0"
     lodash.isboolean "^3.0.3"
@@ -874,6 +874,7 @@
     lodash.isstring "^4.0.1"
     lodash.kebabcase "^4.1.1"
     react-loadable "^5.5.0"
+    rtl-detect "^1.0.2"
     tslib "^1.9.3"
 
 "@cnakazawa/watch@^1.0.3":
@@ -3307,7 +3308,7 @@ deep-is@~0.1.3:
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
 
-deepmerge@^3.0.0, deepmerge@^3.2.0:
+deepmerge@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.2.0.tgz#58ef463a57c08d376547f8869fdc5bcee957f44e"
   integrity sha512-6+LuZGU7QCNUnAJyX8cIrlzoEgggTM6B7mm+znKOX4t5ltluT9KLjN6g61ECMS0LTsLW7yDpNoxhix5FZcrIow==
@@ -9287,6 +9288,11 @@ rsvp@^3.3.3:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.6.2.tgz#2e96491599a96cde1b515d5674a8f7a91452926a"
   integrity sha512-OfWGQTb9vnwRjwtA2QwpG2ICclHC3pgXZO5xt8H2EfgDquO0qVdSb5T88L4qJVAEugbS56pAuV4XZM58UX8ulw==
+
+rtl-detect@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/rtl-detect/-/rtl-detect-1.0.2.tgz#8eca316f5c6563d54df4e406171dd7819adda67f"
+  integrity sha512-5X1422hvphzg2a/bo4tIDbjFjbJUOaPZwqE6dnyyxqwFqfR+tBcvfqapJr0o0VygATVCGKiODEewhZtKF+90AA==
 
 run-applescript@^3.0.0:
   version "3.2.0"
