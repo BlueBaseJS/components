@@ -8,7 +8,7 @@ export interface LinkProps {
 	params?: NavigationActionParams;
 	onPress?: (ev: NativeSyntheticEvent<NativeTouchEvent>) => void;
 	component?: React.ComponentType<any>;
-	method?: 'navigate' | 'push' | 'replace'
+	method?: 'navigate' | 'push' | 'replace';
 
 	/**
 	 * @deprecated
@@ -18,7 +18,7 @@ export interface LinkProps {
 }
 
 export const LinkDefaultProps: Partial<LinkProps> = {
-	method: 'navigate'
+	method: 'navigate',
 };
 
 /**
