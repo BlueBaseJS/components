@@ -15,6 +15,12 @@ export interface LinkProps {
 	 * Use "method" instead
 	 */
 	replace?: boolean;
+
+	/**
+	 * If we give a different component, like Button, allow more props to pass on
+	 * to the component.
+	 */
+	[key: string]: any;
 }
 
 export const LinkDefaultProps: Partial<LinkProps> = {
