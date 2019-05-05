@@ -73,7 +73,7 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@bluebase/code-standards": "^1.0.2",
-    "@bluebase/core": "^4.0.0-aplha.10",
+    "@bluebase/core": "^4.0.0-aplha.27",
     "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.9",
