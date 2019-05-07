@@ -6,6 +6,8 @@ export interface TextStyles {
 }
 
 export interface TextProps extends NativeTextProps {
+	href?: string;
+	target?: string;
 	styles?: Partial<TextStyles>;
 }
 
