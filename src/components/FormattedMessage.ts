@@ -2,7 +2,6 @@ import { TextProps } from './Text';
 import { getComponent } from '@bluebase/core';
 
 export interface FormattedMessageProps extends TextProps {
-	children: string;
 	component?: React.ComponentType<any>;
 }
 
