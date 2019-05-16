@@ -1,12 +1,16 @@
 import { MaybeRenderPropChildren } from '../utils/Components';
 import { getComponent } from '@bluebase/core';
 
+export interface ErrorObserverState {
+	readonly error?: Error;
+}
+
 export interface ErrorObserverProps {
 	/** If an error is passed as a prop, shows an error state. */
 	error?: Error;
 
 	/** A function to check error based on props. */
-	checkError?: (props: ErrorObserverProps & any) => Error;
+	checkError?: (props: ErrorObserverProps & any, state: ErrorObserverState) => Error;
 
 	/** Component to show the error state. */
 	errorComponent?: React.ComponentType<any>;
