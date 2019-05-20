@@ -1,8 +1,9 @@
-import { TextProps } from './Text';
 import { getComponent } from '@bluebase/core';
 
-export interface FormattedMessageProps extends TextProps {
+export interface FormattedMessageProps {
 	component?: React.ComponentType<any>;
+
+	[key: string]: any;
 }
 
 // tslint:disable: jsdoc-format
