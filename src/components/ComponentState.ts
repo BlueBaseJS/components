@@ -1,4 +1,5 @@
 import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+
 import { BlueBaseImageProps } from './BlueBaseImage';
 import { ButtonProps } from './Button';
 import React from 'react';
@@ -9,14 +10,17 @@ export interface ComponentStateStyles {
 	/** Action button container styles */
 	actionRoot?: ViewStyle;
 
+	/** Action button styles */
+	action?: ViewStyle;
+
 	/** Description text styles */
 	description?: TextStyle;
 
-	/** Image styles */
-	image?: ImageStyle;
-
 	/** Styles of image container view */
 	imageRoot?: ViewStyle;
+
+	/** Image styles */
+	image?: ImageStyle;
 
 	/** Main root container styles */
 	root?: ViewStyle;
