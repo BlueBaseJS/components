@@ -1,8 +1,12 @@
-import { ImageBackgroundProps as RNImageBackgroundProps, ImageProps } from 'react-native';
-import { getComponent } from '@bluebase/core';
+import {
+	ImageBackgroundProps as NImageBackgroundProps,
+	ImageProps as NImageProps,
+} from 'react-native';
+import { Omit, getComponent } from '@bluebase/core';
 
-export interface ImageBackgroundProps extends RNImageBackgroundProps {
-	source: ImageProps['source'];
+export interface ImageBackgroundProps extends Omit<NImageBackgroundProps, 'source'> {
+	/** Image source or BlueBase registry key */
+	source?: NImageProps['source'] | string | string[];
 }
 
 // tslint:disable: jsdoc-format
