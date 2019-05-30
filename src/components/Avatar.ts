@@ -22,6 +22,11 @@ export interface AvatarProps {
 	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
+	 * Custom color of Avatar.
+	 */
+	avatarColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
+
+	/**
 	 * Used when type is 'icon'.
 	 * This is the name prop of the Icon component
 	 */
