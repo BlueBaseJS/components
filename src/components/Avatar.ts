@@ -24,7 +24,7 @@ export interface AvatarProps {
 	/**
 	 * Custom color of Avatar.
 	 */
-	avatarColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
+	backgroundColor?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
 	/**
 	 * Used when type is 'icon'.
