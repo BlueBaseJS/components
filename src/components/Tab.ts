@@ -16,6 +16,10 @@ export interface TabProps {
 
 	/** Tab value */
 	value?: string;
+
+	/** Tab styles */
+	styles?: object;
+
 }
 
 export const TabDefaultProps = {
