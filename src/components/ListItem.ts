@@ -41,6 +41,8 @@ export interface ListItemProps {
 	 * This should be used if there is no left avatar or left icon.
 	 */
 	inset?: boolean;
+
+	style?: any;
 }
 
 export const ListItemDefaultProps = {
