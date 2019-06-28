@@ -8,8 +8,8 @@ import { getComponent } from '@bluebase/core';
 
 export interface StatefulComponentProps
 	extends DataObserverProps,
-		ErrorObserverProps,
-		WaitObserverProps {
+	ErrorObserverProps,
+	WaitObserverProps {
 	// Components
 	component?: React.ComponentType<any>;
 	loadingComponent: React.ComponentType<any>;
@@ -41,4 +41,5 @@ export const StatefulComponent = getComponent<StatefulComponentProps>('StatefulC
 StatefulComponent.defaultProps = {
 	emptyComponent: EmptyState,
 	loadingComponent: LoadingState,
+	timeout: 10000,
 };
