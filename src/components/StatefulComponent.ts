@@ -6,12 +6,12 @@ import { getComponent } from '@bluebase/core';
 
 export interface StatefulComponentProps
 	extends DataObserverProps,
-		ErrorObserverProps,
-		WaitObserverProps {
+	ErrorObserverProps,
+	WaitObserverProps {
 	// Components
 	component?: React.ComponentType<any>;
-	loadingComponent?: React.ComponentType<any>;
-	emptyComponent?: React.ComponentType<any>;
+	loadingComponent: React.ComponentType<any>;
+	emptyComponent: React.ComponentType<any>;
 
 	children?: MaybeRenderPropChildren;
 
