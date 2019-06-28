@@ -1,13 +1,15 @@
 import { DataObserverProps } from './DataObserver';
+import { EmptyState } from './EmptyState';
 import { ErrorObserverProps } from './ErrorObserver';
+import { LoadingState } from './LoadingState';
 import { MaybeRenderPropChildren } from '../utils/Components';
 import { WaitObserverProps } from './WaitObserver';
 import { getComponent } from '@bluebase/core';
 
 export interface StatefulComponentProps
 	extends DataObserverProps,
-		ErrorObserverProps,
-		WaitObserverProps {
+	ErrorObserverProps,
+	WaitObserverProps {
 	// Components
 	component?: React.ComponentType<any>;
 	loadingComponent: React.ComponentType<any>;
@@ -35,3 +37,8 @@ export interface StatefulComponentProps
  * ```
  */
 export const StatefulComponent = getComponent<StatefulComponentProps>('StatefulComponent');
+
+StatefulComponent.defaultProps = {
+	emptyComponent: EmptyState,
+	loadingComponent: LoadingState,
+};
