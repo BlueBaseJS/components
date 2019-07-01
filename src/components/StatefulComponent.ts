@@ -12,8 +12,8 @@ export interface StatefulComponentProps
 		WaitObserverProps {
 	// Components
 	component?: React.ComponentType<any>;
-	loadingComponent: React.ComponentType<any>;
-	emptyComponent: React.ComponentType<any>;
+	loadingComponent?: React.ComponentType<any>;
+	emptyComponent?: React.ComponentType<any>;
 
 	children?: MaybeRenderPropChildren;
 
