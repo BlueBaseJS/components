@@ -76,7 +76,7 @@
     "@bluebase/core": "^4.0.0-aplha.10",
     "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^24.0.9",
+    "@types/jest": "^24.0.17",
     "@types/react": "^16.8.7",
     "@types/react-dom": "^16.8.2",
     "@types/react-native": "^0.57.7",
