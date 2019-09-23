@@ -13,7 +13,8 @@ export interface StackScreenOptions {
 	header: string;
 
 	/**
-	 * To set a custom header for all the screens in the navigator, you can specify this option in the screenOptions prop of the navigator.
+	 * To set a custom header for all the screens in the navigator,
+	 * you can specify this option in the screenOptions prop of the navigator.
 	 */
 	headerTitle: string;
 
@@ -30,7 +31,11 @@ export interface StackScreenOptions {
 	headerBackAllowFontScaling: boolean;
 
 	/**
-	 * Function which returns a React Element to display custom image in header's back button. When a function is used, it receives the tintColor in it's argument object. Defaults to Image component with back image source, which is the default back icon image for the platform (a chevron on iOS and an arrow on Android).
+	 * Function which returns a React Element to
+	 * display custom image in header's back button.
+	 *  When a function is used, it receives the tintColor in it's argument object.
+	 * Defaults to Image component with back image source,
+	 *  which is the default back icon image for the platform (a chevron on iOS and an arrow on Android).
 	 */
 	headerBackImage: () => void;
 }
@@ -54,13 +59,16 @@ export interface ScreenViewProps {
 	/**
 	 * Specifies how to display the selection items when the user taps on the picker:
 	 *  card - Use the standard iOS and Android screen transitions. This is the default.
-	 *  modal - Make the screens slide in from the bottom which is a common iOS pattern. Only works on iOS, has no effect on Android.
+	 *  modal - Make the screens slide in from the bottom which is a common iOS pattern.
+	 *  Only works on iOS, has no effect on Android.
 	 */
 	mode: 'Card' | 'modal';
 
 	/**
-	 *  float - Render a single header that stays at the top and animates as screens are changed. This is a common pattern on iOS.
-	 * screen - Each screen has a header attached to it and the header fades in and out together with the screen. This is a common pattern on Android.
+	 *  float - Render a single header that stays at the top
+	 *  and animates as screens are changed. This is a common pattern on iOS.
+	 * screen - Each screen has a header attached to it
+	 * and the header fades in and out together with the screen. This is a common pattern on Android.
 	 * none - No header will be rendered.
 	 */
 	headerMode?: 'float' | 'screen' | 'none';
