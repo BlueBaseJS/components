@@ -1,4 +1,4 @@
-import { Body1, Body2, View } from '@bluebase/components';
+import { Body1, Body2, View } from '../';
 
 import React from 'react';
 import { getComponent } from '@bluebase/core';
