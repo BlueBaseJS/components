@@ -48,7 +48,7 @@ export interface AvatarProps {
 	style?: ViewStyle;
 }
 
-export const AvatarDefaultProps = {
+export const AvatarDefaultProps: Partial<AvatarProps> = {
 	size: 56,
 	variant: 'circle',
 };
