@@ -1,4 +1,5 @@
 import { BlueBaseImageProps } from './BlueBaseImage';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface AvatarProps {
@@ -39,11 +40,17 @@ export interface AvatarProps {
 	 */
 	text?: string;
 
-	style?: any;
+	/**
+	 * The shape of the avatar.
+	 */
+	variant?: 'circle' | 'rounded' | 'square';
+
+	style?: ViewStyle;
 }
 
-export const AvatarDefaultProps = {
+export const AvatarDefaultProps: Partial<AvatarProps> = {
 	size: 56,
+	variant: 'circle',
 };
 
 // tslint:disable: jsdoc-format
