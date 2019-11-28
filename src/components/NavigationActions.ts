@@ -27,7 +27,7 @@ export interface NavigationActionsObject {
 	push: (routeName: NavigationActionPayload, params?: NavigationActionParams) => void;
 	pop: (steps?: number) => void;
 
-	setParams: (params: NavigationActionParams) => void;
+	setParams: (params: NavigationActionParams, addToSearch?: boolean) => void;
 	getParam: (key: string, defaultValue: any) => any;
 
 	source: any;
