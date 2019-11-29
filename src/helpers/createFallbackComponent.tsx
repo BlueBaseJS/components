@@ -52,6 +52,7 @@ export const createFallbackComponent = ({ name, moduleName }: CreateFallbackComp
 		</View>
 	);
 
+	Component.displayName = name;
 	return Component;
 };
 
