@@ -1,5 +1,6 @@
+import { TextStyle, ViewStyle } from 'react-native';
+
 import { BlueBaseImageProps } from './BlueBaseImage';
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface AvatarProps {
@@ -45,6 +46,7 @@ export interface AvatarProps {
 	 */
 	variant?: 'circle' | 'rounded' | 'square';
 
+	textStyle?: TextStyle;
 	style?: ViewStyle;
 }
 
