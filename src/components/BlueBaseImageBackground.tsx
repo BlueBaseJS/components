@@ -3,9 +3,6 @@ import {
 	ImageProps as NImageProps,
 } from 'react-native';
 import { Omit, getComponent } from '@bluebase/core';
-
-import { ReactNode } from 'react';
-
 export interface BlueBaseImageBackgroundProps extends Omit<NImageBackgroundProps, 'source'> {
 	/** Image source or BlueBase registry key */
 	source?: NImageProps['source'] | string | string[];
