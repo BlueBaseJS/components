@@ -9,7 +9,6 @@ import { ReactNode } from 'react';
 export interface BlueBaseImageBackgroundProps extends Omit<NImageBackgroundProps, 'source'> {
 	/** Image source or BlueBase registry key */
 	source?: NImageProps['source'] | string | string[];
-	children?: ReactNode;
 }
 
 // tslint:disable: jsdoc-format
@@ -25,11 +24,11 @@ export interface BlueBaseImageBackgroundProps extends Omit<NImageBackgroundProps
 <BlueBaseImageBackground resolve={['LogoSquare', 'Logo']}><Content /></BlueBaseImageBackground>
 ```
  */
-export const ImageBackground = getComponent<BlueBaseImageBackgroundProps>(
+export const BlueBaseImageBackground = getComponent<BlueBaseImageBackgroundProps>(
 	'BlueBaseImageBackground'
 );
 
 /**
  * Default props for ImageBackground component
  */
-export const ImageBackgroundDefaultProps = {};
+export const BlueBaseImageBackgroundDefaultProps = {};
