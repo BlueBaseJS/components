@@ -3,3 +3,4 @@ import { getComponent } from '@bluebase/core';
 
 export { ImageBackgroundProps };
 export const ImageBackground = getComponent<ImageBackgroundProps>('ImageBackground');
+export const ImageBackgroundDefaultProps = {};
