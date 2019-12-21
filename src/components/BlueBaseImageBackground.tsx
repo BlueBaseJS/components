@@ -6,6 +6,8 @@ import { Omit, getComponent } from '@bluebase/core';
 export interface BlueBaseImageBackgroundProps extends Omit<NImageBackgroundProps, 'source'> {
 	/** Image source or BlueBase registry key */
 	source?: NImageProps['source'] | string | string[];
+
+	children?: React.ReactNode;
 }
 
 // tslint:disable: jsdoc-format
