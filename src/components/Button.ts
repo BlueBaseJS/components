@@ -1,4 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
+
 import { DynamicIconProps } from './DynamicIcon';
 import React from 'react';
 import { getComponent } from '@bluebase/core';
@@ -91,3 +92,5 @@ export const ButtonDefaultProps: Partial<ButtonProps> = {
 	size: 'medium',
 	variant: 'contained',
 };
+
+Button.defaultProps = ButtonDefaultProps;
