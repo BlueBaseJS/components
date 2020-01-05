@@ -1,5 +1,6 @@
 import { MenuItem, MenuItemProps } from './MenuItem';
-import { StyleProp, ViewStyle } from 'react-native';
+
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface MenuProps {
@@ -14,6 +15,12 @@ export interface MenuProps {
 	anchor?: React.ReactNode;
 
 	/**
+	 * If a Menu implementation (like in Material UI Plugin) wraps anchor in a wrapper.
+	 * These styles can be passed to that el.
+	 */
+	anchorWrapperStyle?: ViewStyle;
+
+	/**
 	 * Callback called when Menu is dismissed. The `visible` prop needs to be updated when this is called.
 	 */
 	onDismiss?: () => void;
@@ -23,7 +30,7 @@ export interface MenuProps {
 	 */
 	children: React.ReactNode;
 
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 type MenuType = React.ComponentType<MenuProps> & { Item: React.ComponentType<MenuItemProps> };
