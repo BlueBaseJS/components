@@ -1,3 +1,4 @@
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface BottomNavigationProps {
@@ -15,6 +16,8 @@ export interface BottomNavigationProps {
 	 * Tab, you can set this property to false.
 	 */
 	value?: any;
+
+	style?: ViewStyle;
 }
 
 export const BottomNavigationDefaultProps = {
