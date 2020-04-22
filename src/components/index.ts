@@ -75,6 +75,7 @@ export * from './Row';
 export * from './SafeAreaView';
 export * from './ScreenSizeObserver';
 export * from './ScrollView';
+export * from './Searchbar';
 export * from './Slider';
 export * from './Snackbar';
 export * from './StatefulComponent';
