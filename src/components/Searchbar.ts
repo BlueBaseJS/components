@@ -1,9 +1,9 @@
-import { Omit, getComponent } from '@bluebase/core';
 import { TextInputProps, TextStyle, ViewStyle } from 'react-native';
 
 import { IconProps } from './Icon';
+import { getComponent } from '@bluebase/core';
 
-export interface SearchbarProps extends Omit<TextInputProps, 'value'> {
+export interface SearchbarProps extends TextInputProps {
 	/**
 	 * Accessibility label for the button. This is read by the screen reader when the user taps the button.
 	 */
