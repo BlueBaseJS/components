@@ -63,6 +63,7 @@ export * from './NavigationActions';
 export * from './Noop';
 export * from './OrientationObserver';
 export * from './Overline';
+export * from './Pagination';
 export * from './PluginIcon';
 export * from './ProgressBar';
 export * from './Picker';
