@@ -1,12 +1,13 @@
-import { ImageStyle, StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+
 import { getComponent } from '@bluebase/core';
 
 type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
 
 export interface HeaderProps {
-	headerTitleContainerStyle?: StyleProp<ViewStyle>;
-	headerRightContainerStyle?: StyleProp<ViewStyle>;
-	headerLeftContainerStyle?: StyleProp<ViewStyle>;
+	headerTitleContainerStyle?: ViewStyle;
+	headerRightContainerStyle?: ViewStyle;
+	headerLeftContainerStyle?: ViewStyle;
 	layoutPreset?: 'left' | 'center';
 
 	backTitleVisible?: boolean;
@@ -19,7 +20,7 @@ export interface HeaderProps {
 	header?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	headerTransparent?: boolean;
 	headerTitle?: string | React.ReactElement<any>;
-	headerTitleStyle?: StyleProp<TextStyle>;
+	headerTitleStyle?: TextStyle;
 	headerTitleAllowFontScaling?: boolean;
 	headerTintColor?: string;
 	headerLeft?:
@@ -29,28 +30,28 @@ export interface HeaderProps {
 	headerBackTitle?: string | null;
 	headerBackImage?: React.ReactElement<any>;
 	headerTruncatedBackTitle?: string;
-	headerBackTitleStyle?: StyleProp<TextStyle>;
+	headerBackTitleStyle?: TextStyle;
 	headerPressColorAndroid?: string;
 	headerRight?: React.ReactElement<any> | null;
-	headerStyle?: StyleProp<ViewStyle>;
+	headerStyle?: ViewStyle;
 	headerForceInset?: any /*HeaderForceInset*/;
 	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	// [key: string]: any,
 }
 
 export interface HeaderStyles {
-	root: StyleProp<ViewStyle>;
-	wrapper: StyleProp<ViewStyle>;
-	transparentContainer: StyleProp<ViewStyle>;
-	header: StyleProp<ViewStyle>;
-	item: StyleProp<ViewStyle>;
-	iconMaskContainer: StyleProp<ViewStyle>;
-	iconMaskFillerRect: StyleProp<ViewStyle>;
-	iconMask: StyleProp<ImageStyle>;
-	title: StyleProp<ViewStyle>;
-	left: StyleProp<ViewStyle>;
-	right: StyleProp<ViewStyle>;
-	flexOne: StyleProp<ViewStyle>;
+	root: ViewStyle;
+	wrapper: ViewStyle;
+	transparentContainer: ViewStyle;
+	header: ViewStyle;
+	item: ViewStyle;
+	iconMaskContainer: ViewStyle;
+	iconMaskFillerRect: ViewStyle;
+	iconMask: ImageStyle;
+	title: ViewStyle;
+	left: ViewStyle;
+	right: ViewStyle;
+	flexOne: ViewStyle;
 }
 
 /**

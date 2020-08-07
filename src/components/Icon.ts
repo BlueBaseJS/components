@@ -1,4 +1,4 @@
-import { StyleProp, TextStyle } from 'react-native';
+import { TextStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface IconProps {
@@ -11,7 +11,7 @@ export interface IconProps {
 	/** Color of the icon. */
 	color?: 'primary' | 'secondary' | 'error' | 'success' | 'warning' | string;
 
-	style?: StyleProp<TextStyle>;
+	style?: TextStyle;
 }
 
 export const IconDefaultProps: Partial<IconProps> = {

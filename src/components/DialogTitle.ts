@@ -1,9 +1,9 @@
-import { StyleProp, TextStyle } from 'react-native';
+import { TextStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface DialogTitleProps {
 	children: React.ReactNode;
-	style?: StyleProp<TextStyle>;
+	style?: TextStyle;
 }
 
 export const DialogTitleDefaultProps = {};

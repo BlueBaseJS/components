@@ -1,4 +1,4 @@
-import { StyleProp, TextStyle } from 'react-native';
+import { TextStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface BadgeProps {
@@ -17,7 +17,7 @@ export interface BadgeProps {
 	 */
 	children?: string | number;
 
-	style?: StyleProp<TextStyle>;
+	style?: TextStyle;
 }
 
 export const BadgeDefaultProps: Partial<BadgeProps> = {

@@ -1,12 +1,13 @@
-import { ImageStyle, StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+
 import { getComponent } from '@bluebase/core';
 
 export interface HeaderBackButtonStyles {
-	androidButtonWrapper: StyleProp<ViewStyle>;
-	icon: StyleProp<ImageStyle>;
-	iconWithTitle: StyleProp<ImageStyle>;
-	wrapper: StyleProp<ViewStyle>;
-	title: StyleProp<TextStyle>;
+	androidButtonWrapper: ViewStyle;
+	icon: ImageStyle;
+	iconWithTitle: ImageStyle;
+	wrapper: ViewStyle;
+	title: TextStyle;
 }
 
 export interface HeaderBackButtonProps {
@@ -15,13 +16,13 @@ export interface HeaderBackButtonProps {
 	title?: string | null;
 	backImage?: React.ReactElement<any>;
 	truncatedTitle?: string;
-	titleStyle?: StyleProp<TextStyle>;
+	titleStyle?: TextStyle;
 	pressColorAndroid?: string;
 	onPress?: () => void;
 	width?: number;
 	allowFontScaling?: boolean;
 	styles?: Partial<HeaderBackButtonStyles>;
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 	testId?: string;
 }
 

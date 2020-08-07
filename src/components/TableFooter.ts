@@ -1,9 +1,9 @@
-import { StyleProp, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface TableFooterProps {
 	children: React.ReactNode;
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 export const TableFooterDefaultProps = {};

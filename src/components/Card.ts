@@ -1,8 +1,8 @@
-import { StyleProp, ViewStyle } from 'react-native';
 import { CardActions } from './CardActions';
 import { CardContent } from './CardContent';
 import { CardCover } from './CardCover';
 import { CardHeader } from './CardHeader';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface CardProps {
@@ -13,7 +13,7 @@ export interface CardProps {
 	onLongPress?: () => void;
 
 	children: React.ReactNode;
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 export const CardDefaultProps = {};
