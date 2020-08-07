@@ -8,7 +8,7 @@ export interface PaginationProps {
 	disabled?: boolean;
 
 	/** Callback fired when the page is changed. */
-	onChange?: (event: object, page: number) => void;
+	onChange?: (page: number) => void;
 
 	/** The current page. */
 	page?: number;
