@@ -2,16 +2,16 @@ import { getComponent } from '@bluebase/core';
 
 export interface PaginationProps {
 	/** The total number of pages. */
-	count: number;
+	count?: number;
 
 	/** If true, the pagination component will be disabled. */
-	disabled: boolean;
+	disabled?: boolean;
 
 	/** Callback fired when the page is changed. */
-	onChange: (event: object, page: number) => void;
+	onChange?: (event: object, page: number) => void;
 
 	/** The current page. */
-	page: number;
+	page?: number;
 
 	/**
 	 * Used to locate this view in end-to-end tests.
