@@ -1,4 +1,4 @@
-import { StyleProp, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface TableCellProps {
@@ -12,7 +12,7 @@ export interface TableCellProps {
 	onPress?: boolean;
 
 	children: React.ReactNode;
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 export const TableCellDefaultProps = {};

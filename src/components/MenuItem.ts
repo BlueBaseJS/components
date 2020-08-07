@@ -1,5 +1,5 @@
-import { StyleProp, ViewStyle } from 'react-native';
 import { DynamicIconProps } from './DynamicIcon';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface MenuItemProps {
@@ -18,7 +18,7 @@ export interface MenuItemProps {
 	/** Function to execute on press. */
 	onPress?: () => void;
 
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 export const MenuItemDefaultProps = {};

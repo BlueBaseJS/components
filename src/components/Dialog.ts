@@ -1,7 +1,7 @@
-import { StyleProp, ViewStyle } from 'react-native';
 import { DialogActions } from './DialogActions';
 import { DialogContent } from './DialogContent';
 import { DialogTitle } from './DialogTitle';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface DialogProps {
@@ -25,7 +25,7 @@ export interface DialogProps {
 	 */
 	children: React.ReactNode;
 
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 export const DialogDefaultProps = {};

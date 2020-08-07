@@ -1,4 +1,5 @@
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { TextStyle, ViewStyle } from 'react-native';
+
 import { MaybeThunk } from '../utils/Thunks';
 import { getComponent } from '@bluebase/core';
 
@@ -9,7 +10,7 @@ export interface NavigationOptions {
 	header?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	headerTransparent?: boolean;
 	headerTitle?: string | React.ReactElement<any>;
-	headerTitleStyle?: StyleProp<TextStyle>;
+	headerTitleStyle?: TextStyle;
 	headerTitleAllowFontScaling?: boolean;
 	headerTintColor?: string;
 	headerLeft?:
@@ -19,10 +20,10 @@ export interface NavigationOptions {
 	headerBackTitle?: string | null;
 	headerBackImage?: React.ReactElement<any>;
 	headerTruncatedBackTitle?: string;
-	headerBackTitleStyle?: StyleProp<TextStyle>;
+	headerBackTitleStyle?: TextStyle;
 	headerPressColorAndroid?: string;
 	headerRight?: React.ReactElement<any> | null;
-	headerStyle?: StyleProp<ViewStyle>;
+	headerStyle?: ViewStyle;
 	headerForceInset?: any /*HeaderForceInset*/;
 	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
 	gesturesEnabled?: boolean;

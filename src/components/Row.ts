@@ -1,9 +1,9 @@
-import { StyleProp, ViewStyle } from 'react-native';
 import { ViewProps } from './View';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface RowStyles {
-	root: StyleProp<ViewStyle>;
+	root: ViewStyle;
 }
 
 export interface RowProps extends ViewProps {

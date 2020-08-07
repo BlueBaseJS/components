@@ -1,4 +1,4 @@
-import { StyleProp, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface CardHeaderProps {
@@ -11,7 +11,7 @@ export interface CardHeaderProps {
 	left?: React.ReactNode;
 	right?: React.ReactNode;
 
-	style?: StyleProp<ViewStyle>;
+	style?: ViewStyle;
 }
 
 export const CardHeaderDefaultProps = {};
