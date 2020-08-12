@@ -43,6 +43,8 @@ export interface SliderProps extends NativeSliderProps {
 	 * If `true`, the component will display value
 	 */
 	showValue?: boolean;
+
+	onSlidingComplete?: (value: number) => void;
 }
 
 export const Slider = getComponent<SliderProps>('Slider');
