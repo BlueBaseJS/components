@@ -25,6 +25,7 @@ export interface DialogProps {
 	 */
 	children: React.ReactNode;
 
+	testID?: string;
 	style?: ViewStyle;
 }
 
