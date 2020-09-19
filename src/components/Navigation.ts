@@ -22,7 +22,7 @@ export interface NavigationOptions {
 	headerTruncatedBackTitle?: string;
 	headerBackTitleStyle?: TextStyle;
 	headerPressColorAndroid?: string;
-	headerRight?: React.ReactElement<any> | null;
+	headerRight?: React.ReactElement<any> | ((props: any) => React.ReactElement<any>) | null;
 	headerStyle?: ViewStyle;
 	headerForceInset?: any /*HeaderForceInset*/;
 	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
