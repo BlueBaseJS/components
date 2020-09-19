@@ -1,4 +1,5 @@
 import { DynamicIconProps } from './DynamicIcon';
+import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
 
 export interface TabProps {
@@ -16,6 +17,9 @@ export interface TabProps {
 
 	/** Tab value */
 	value?: string;
+
+	style?: ViewStyle;
+	styles?: any;
 }
 
 export const TabDefaultProps = {
