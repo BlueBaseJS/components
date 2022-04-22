@@ -1,5 +1,6 @@
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
 
 export interface BottomNavigationProps {
 	/** If true, all BottomNavigationActions will show their labels */

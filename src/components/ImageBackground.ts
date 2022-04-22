@@ -1,5 +1,5 @@
-import { ImageBackgroundProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { ImageBackgroundProps } from 'react-native';
 
 export { ImageBackgroundProps };
 export const ImageBackground = getComponent<ImageBackgroundProps>('ImageBackground');

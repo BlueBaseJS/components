@@ -1,7 +1,7 @@
+import { getComponent } from '@bluebase/core';
 import { TextStyle, ViewStyle } from 'react-native';
 
 import { BlueBaseImageProps } from './BlueBaseImage';
-import { getComponent } from '@bluebase/core';
 
 export interface AvatarProps {
 	/**

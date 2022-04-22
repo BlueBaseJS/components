@@ -1,5 +1,6 @@
-import { BlueBaseImageProps } from './BlueBaseImage';
 import { getComponent } from '@bluebase/core';
+
+import { BlueBaseImageProps } from './BlueBaseImage';
 
 export interface CardCoverProps extends BlueBaseImageProps {}
 

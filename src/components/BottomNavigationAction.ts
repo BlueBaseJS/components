@@ -1,5 +1,7 @@
-import { DynamicIconProps } from './DynamicIcon';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+
+import { DynamicIconProps } from './DynamicIcon';
 
 export interface BottomNavigationActionProps {
 	/** If true, the BottomNavigationAction will show its label. */
@@ -21,8 +23,7 @@ export const BottomNavigationActionDefaultProps = {};
  * # 🗂 BottomNavigationAction
  * A single tab component in the Bottom Navigation.
  */
-export const BottomNavigationAction = getComponent<BottomNavigationActionProps>(
-	'BottomNavigationAction'
-);
+export const BottomNavigationAction =
+	getComponent<BottomNavigationActionProps>('BottomNavigationAction');
 
 BottomNavigationAction.defaultProps = BottomNavigationActionDefaultProps;

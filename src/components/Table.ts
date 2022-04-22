@@ -1,3 +1,7 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
+
 import { TableBody } from './TableBody';
 import { TableCell } from './TableCell';
 import { TableFooter } from './TableFooter';
@@ -5,8 +9,6 @@ import { TableHead } from './TableHead';
 import { TablePagination } from './TablePagination';
 import { TableRow } from './TableRow';
 import { TableTitle } from './TableTitle';
-import { ViewStyle } from 'react-native';
-import { getComponent } from '@bluebase/core';
 
 export interface TableProps {
 	children: React.ReactNode;

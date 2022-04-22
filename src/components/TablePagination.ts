@@ -1,5 +1,5 @@
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { ViewStyle } from 'react-native';
 
 export interface TablePaginationProps {
 	/**

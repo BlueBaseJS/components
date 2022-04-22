@@ -1,8 +1,16 @@
-import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
-import { NavigationActionParams } from './NavigationActions';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
+
+import { NavigationActionParams } from './NavigationActions';
 
 export interface LinkProps {
+	/**
+	 * If we give a different component, like Button, allow more props to pass on
+	 * to the component.
+	 */
+	[key: string]: any;
+
 	routeName?: string;
 	path?: string;
 	params?: NavigationActionParams;
@@ -15,12 +23,6 @@ export interface LinkProps {
 	 * Use "method" instead
 	 */
 	replace?: boolean;
-
-	/**
-	 * If we give a different component, like Button, allow more props to pass on
-	 * to the component.
-	 */
-	[key: string]: any;
 }
 
 export const LinkDefaultProps: Partial<LinkProps> = {

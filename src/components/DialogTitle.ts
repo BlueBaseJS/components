@@ -1,5 +1,6 @@
-import { TextStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { TextStyle } from 'react-native';
 
 export interface DialogTitleProps {
 	children: React.ReactNode;

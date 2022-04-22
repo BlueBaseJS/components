@@ -1,6 +1,5 @@
-import { TextProps, TextStyle } from 'react-native';
-
 import { getComponent } from '@bluebase/core';
+import { TextProps, TextStyle } from 'react-native';
 
 export interface HeaderTitleStyles {
 	root: TextStyle;

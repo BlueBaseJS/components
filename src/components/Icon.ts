@@ -1,5 +1,5 @@
-import { TextStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { TextStyle } from 'react-native';
 
 export interface IconProps {
 	/** Size of the icon. */

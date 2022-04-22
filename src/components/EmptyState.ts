@@ -1,5 +1,6 @@
-import { ComponentStateProps } from './ComponentState';
 import { getComponent } from '@bluebase/core';
+
+import { ComponentStateProps } from './ComponentState';
 
 export interface EmptyStateProps extends ComponentStateProps {
 	/**

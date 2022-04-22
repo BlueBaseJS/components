@@ -1,4 +1,5 @@
 import { getComponent } from '@bluebase/core';
+import React from 'react';
 
 export interface TabsProps {
 	/** If `true`, the tabs will be centered. This property is intended for large views. */

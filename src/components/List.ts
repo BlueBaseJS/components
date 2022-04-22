@@ -1,10 +1,11 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewProps } from 'react-native';
+
 import { ListAvatar } from './ListAvatar';
 import { ListIcon } from './ListIcon';
 import { ListItem } from './ListItem';
 import { ListSubheader } from './ListSubheader';
-import React from 'react';
-import { ViewProps } from 'react-native';
-import { getComponent } from '@bluebase/core';
 
 export interface ListProps extends ViewProps {
 	children?: React.ReactNode;

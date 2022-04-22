@@ -1,5 +1,6 @@
-import { MaybeRenderPropChildren } from '../utils/Components';
 import { getComponent } from '@bluebase/core';
+
+import { MaybeRenderPropChildren } from '../utils/Components';
 
 export interface DataObserverChildrenProps {
 	/** Initial data that was passed as a prop. */

@@ -1,6 +1,6 @@
-import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 
 type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
 
@@ -17,7 +17,7 @@ export interface HeaderProps {
 
 	// NavigationOptions
 	title?: string;
-	header?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
+	header?: React.ReactElement<any> | renderFunction<any /* HeaderProps*/> | null;
 	headerTransparent?: boolean;
 	headerTitle?: string | React.ReactElement<any>;
 	headerTitleStyle?: TextStyle;
@@ -25,7 +25,7 @@ export interface HeaderProps {
 	headerTintColor?: string;
 	headerLeft?:
 		| React.ReactElement<any>
-		| ((backButtonProps: any /*HeaderBackButtonProps*/) => React.ReactElement<any>)
+		| ((backButtonProps: any /* HeaderBackButtonProps*/) => React.ReactElement<any>)
 		| null;
 	headerBackTitle?: string | null;
 	headerBackImage?: React.ReactElement<any>;
@@ -34,8 +34,8 @@ export interface HeaderProps {
 	headerPressColorAndroid?: string;
 	headerRight?: React.ReactElement<any> | null;
 	headerStyle?: ViewStyle;
-	headerForceInset?: any /*HeaderForceInset*/;
-	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
+	headerForceInset?: any /* HeaderForceInset*/;
+	headerBackground?: React.ReactElement<any> | renderFunction<any /* HeaderProps*/> | null;
 	// [key: string]: any,
 }
 

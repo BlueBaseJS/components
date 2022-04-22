@@ -1,8 +1,11 @@
-import { BlueBaseImageProps } from './BlueBaseImage';
-import React from 'react';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+
+import { BlueBaseImageProps } from './BlueBaseImage';
 
 export interface DynamicIconProps {
+	[key: string]: any;
+
 	/**
 	 * If value is:
 	 *
@@ -40,8 +43,6 @@ export interface DynamicIconProps {
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
-
-	[key: string]: any;
 }
 
 // tslint:disable: jsdoc-format

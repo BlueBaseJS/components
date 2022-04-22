@@ -1,5 +1,6 @@
-import { IconProps } from './Icon';
 import { getComponent } from '@bluebase/core';
+
+import { IconProps } from './Icon';
 
 export interface ListIconProps extends IconProps {}
 

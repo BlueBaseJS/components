@@ -1,5 +1,5 @@
-import { PickerItemProps as RNPickerItemProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { PickerItemProps as RNPickerItemProps } from 'react-native';
 
 export interface PickerItemProps extends RNPickerItemProps {
 	disabled?: boolean;

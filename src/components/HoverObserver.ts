@@ -1,6 +1,7 @@
-import { MaybeRenderPropChildren } from '../utils/Components';
-import { SyntheticEvent } from 'react';
 import { getComponent } from '@bluebase/core';
+import { SyntheticEvent } from 'react';
+
+import { MaybeRenderPropChildren } from '../utils/Components';
 
 interface MouseEventObject {
 	e: SyntheticEvent;

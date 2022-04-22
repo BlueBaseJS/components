@@ -1,5 +1,6 @@
-import { SliderProps as NativeSliderProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { SliderProps as NativeSliderProps } from 'react-native';
 
 export interface SliderProps extends NativeSliderProps {
 	/**

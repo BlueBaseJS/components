@@ -1,6 +1,9 @@
 import { getComponent } from '@bluebase/core';
+import React from 'react';
 
 export interface ResponsiveLayoutProps {
+	[key: string]: any;
+
 	/**
 	 * The default component to render, if a current size component is not given.
 	 */
@@ -55,8 +58,6 @@ export interface ResponsiveLayoutProps {
 	 * The props to pass on to the child compoent when screen size is "xl"
 	 */
 	xlProps?: { [key: string]: any };
-
-	[key: string]: any;
 }
 
 /**

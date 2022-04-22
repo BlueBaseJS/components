@@ -1,9 +1,9 @@
-import { createFallbackComponent, getComponentWithFallback } from '../createFallbackComponent';
-
 import { BlueBaseApp } from '@bluebase/core';
-import React from 'react';
 import { mount } from 'enzyme';
 import { waitForElement } from 'enzyme-async-helpers';
+import React from 'react';
+
+import { createFallbackComponent, getComponentWithFallback } from '../createFallbackComponent';
 
 describe('createFallbackComponent', () => {
 	it('should show a Fallback state', async () => {

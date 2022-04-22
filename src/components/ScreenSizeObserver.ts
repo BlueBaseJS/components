@@ -1,4 +1,4 @@
-import { RenderPropChildren, getComponent } from '@bluebase/core';
+import { getComponent, RenderPropChildren } from '@bluebase/core';
 
 export type SCREEN_SIZE = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 

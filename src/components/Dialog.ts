@@ -1,8 +1,10 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
+
 import { DialogActions } from './DialogActions';
 import { DialogContent } from './DialogContent';
 import { DialogTitle } from './DialogTitle';
-import { ViewStyle } from 'react-native';
-import { getComponent } from '@bluebase/core';
 
 export interface DialogProps {
 	/**

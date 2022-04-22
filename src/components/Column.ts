@@ -1,6 +1,7 @@
-import { ViewProps } from './View';
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { ViewStyle } from 'react-native';
+
+import { ViewProps } from './View';
 
 export interface ColumnStyles {
 	root: ViewStyle;

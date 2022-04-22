@@ -1,5 +1,5 @@
-import { ProgressBarAndroidProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { ProgressBarAndroidProps } from 'react-native';
 
 export interface ProgressBarProps extends ProgressBarAndroidProps {}
 

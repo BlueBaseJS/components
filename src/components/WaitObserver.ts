@@ -1,5 +1,6 @@
-import { MaybeRenderPropChildren } from '../utils/Components';
 import { getComponent } from '@bluebase/core';
+
+import { MaybeRenderPropChildren } from '../utils/Components';
 
 export interface WaitObserverChildrenProps {
 	/** A flag that tells if a timeout has occured */

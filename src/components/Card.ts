@@ -1,9 +1,11 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
+
 import { CardActions } from './CardActions';
 import { CardContent } from './CardContent';
 import { CardCover } from './CardCover';
 import { CardHeader } from './CardHeader';
-import { ViewStyle } from 'react-native';
-import { getComponent } from '@bluebase/core';
 
 export interface CardProps {
 	/** Function to execute on press. */

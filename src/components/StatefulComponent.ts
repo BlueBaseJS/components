@@ -1,10 +1,12 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
+
+import { MaybeRenderPropChildren } from '../utils/Components';
 import { DataObserverProps } from './DataObserver';
 import { EmptyState } from './EmptyState';
 import { ErrorObserverProps } from './ErrorObserver';
 import { LoadingState } from './LoadingState';
-import { MaybeRenderPropChildren } from '../utils/Components';
 import { WaitObserverProps } from './WaitObserver';
-import { getComponent } from '@bluebase/core';
 
 export interface StatefulComponentProps
 	extends DataObserverProps,

@@ -1,6 +1,6 @@
+import { getComponent } from '@bluebase/core';
 import React from 'react';
 import { TextInputProps as RNTextInputProps } from 'react-native';
-import { getComponent } from '@bluebase/core';
 
 export interface TextInputProps extends RNTextInputProps {
 	/**

@@ -1,7 +1,7 @@
-import { createFallbackComponent, getComponentWithFallback } from '../createFallbackComponent';
-
-import React from 'react';
 import storiesOf from '@bluebase/storybook-addon';
+import React from 'react';
+
+import { createFallbackComponent, getComponentWithFallback } from '../createFallbackComponent';
 
 const Fallback = createFallbackComponent({
 	moduleName: '@bluebase/plugin-example',

@@ -1,7 +1,8 @@
-import { MenuItem, MenuItemProps } from './MenuItem';
-
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
+
+import { MenuItem, MenuItemProps } from './MenuItem';
 
 export interface MenuProps {
 	/**

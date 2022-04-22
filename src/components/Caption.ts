@@ -1,5 +1,6 @@
-import { TextProps } from './Text';
 import { getComponent } from '@bluebase/core';
+
+import { TextProps } from './Text';
 
 export interface CaptionProps extends TextProps {}
 

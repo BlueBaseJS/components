@@ -1,6 +1,8 @@
 import { getComponent } from '@bluebase/core';
 
 export interface PluginIconProps {
+	[key: string]: any;
+
 	/** Plugin key */
 	id: string;
 
@@ -11,8 +13,6 @@ export interface PluginIconProps {
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
-
-	[key: string]: any;
 }
 
 export const PluginIcon = getComponent<PluginIconProps>('PluginIcon');

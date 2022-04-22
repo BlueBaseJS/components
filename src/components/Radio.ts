@@ -1,5 +1,6 @@
-import { ViewProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewProps } from 'react-native';
 
 export interface RadioProps extends ViewProps {
 	/**

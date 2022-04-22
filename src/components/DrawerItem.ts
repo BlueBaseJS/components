@@ -1,5 +1,7 @@
-import { IconProps } from './Icon';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+
+import { IconProps } from './Icon';
 
 export interface DrawerItemProps {
 	title: React.ReactNode;

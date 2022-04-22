@@ -1,8 +1,8 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
 import { TextStyle, ViewStyle } from 'react-native';
 
 import { DynamicIconProps } from './DynamicIcon';
-import React from 'react';
-import { getComponent } from '@bluebase/core';
 
 export interface ButtonStyles {
 	root: ViewStyle;
@@ -19,6 +19,8 @@ export interface ButtonStyles {
 }
 
 export interface ButtonProps {
+	[key: string]: any;
+
 	/* Label to be passed as child. */
 	children?: React.ReactNode;
 
@@ -76,8 +78,6 @@ export interface ButtonProps {
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
-
-	[key: string]: any;
 }
 
 export const Button = getComponent<ButtonProps>('Button');

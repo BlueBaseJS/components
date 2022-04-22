@@ -1,9 +1,9 @@
 import { getComponent } from '@bluebase/core';
+import React from 'react';
 
 export interface FormattedMessageProps {
-	component?: React.ComponentType<any>;
-
 	[key: string]: any;
+	component?: React.ComponentType<any>;
 }
 
 // tslint:disable: jsdoc-format

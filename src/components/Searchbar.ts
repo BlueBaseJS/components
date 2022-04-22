@@ -1,7 +1,7 @@
+import { getComponent } from '@bluebase/core';
 import { TextInputProps, TextStyle, ViewStyle } from 'react-native';
 
 import { IconProps } from './Icon';
-import { getComponent } from '@bluebase/core';
 
 export interface SearchbarProps extends TextInputProps {
 	/**

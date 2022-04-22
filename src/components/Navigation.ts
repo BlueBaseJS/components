@@ -1,13 +1,14 @@
+import { getComponent } from '@bluebase/core';
+import React from 'react';
 import { TextStyle, ViewStyle } from 'react-native';
 
 import { MaybeThunk } from '../utils/Thunks';
-import { getComponent } from '@bluebase/core';
 
 type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
 
 export interface NavigationOptions {
 	title?: string;
-	header?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
+	header?: React.ReactElement<any> | renderFunction<any /* HeaderProps*/> | null;
 	headerTransparent?: boolean;
 	headerTitle?: string | React.ReactElement<any>;
 	headerTitleStyle?: TextStyle;
@@ -15,7 +16,7 @@ export interface NavigationOptions {
 	headerTintColor?: string;
 	headerLeft?:
 		| React.ReactElement<any>
-		| ((backButtonProps: any /*HeaderBackButtonProps*/) => React.ReactElement<any>)
+		| ((backButtonProps: any /* HeaderBackButtonProps*/) => React.ReactElement<any>)
 		| null;
 	headerBackTitle?: string | null;
 	headerBackImage?: React.ReactElement<any>;
@@ -24,8 +25,8 @@ export interface NavigationOptions {
 	headerPressColorAndroid?: string;
 	headerRight?: React.ReactElement<any> | ((props: any) => React.ReactElement<any>) | null;
 	headerStyle?: ViewStyle;
-	headerForceInset?: any /*HeaderForceInset*/;
-	headerBackground?: React.ReactElement<any> | renderFunction<any /*HeaderProps*/> | null;
+	headerForceInset?: any /* HeaderForceInset*/;
+	headerBackground?: React.ReactElement<any> | renderFunction<any /* HeaderProps*/> | null;
 	gesturesEnabled?: boolean;
 	gestureResponseDistance?: { vertical?: number; horizontal?: number };
 	gestureDirection?: 'default' | 'inverted';
@@ -33,6 +34,8 @@ export interface NavigationOptions {
 }
 
 export interface RouteConfig {
+	[key: string]: any;
+
 	/** Name of route */
 	name: string;
 
@@ -50,11 +53,11 @@ export interface RouteConfig {
 
 	/** Child Navigator */
 	navigator?: NavigatorProps;
-
-	[key: string]: any;
 }
 
 export interface NavigatorProps {
+	[key: string]: any;
+
 	/**
 	 * Defaults to 'switch'
 	 */
@@ -95,17 +98,14 @@ export interface NavigatorProps {
 	 * - `none` - No header will be rendered.
 	 */
 	headerMode?: 'float' | 'screen' | 'none';
-
-	[key: string]: any;
 }
 
 /**
  * Props for the Router component
  */
 export interface NavigationProps {
-	navigator: NavigatorProps;
-
 	[key: string]: any;
+	navigator: NavigatorProps;
 }
 
 export const Navigation = getComponent<NavigationProps>('Navigation');

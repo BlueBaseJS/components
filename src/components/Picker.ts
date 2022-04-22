@@ -1,6 +1,8 @@
-import { Omit, getComponent } from '@bluebase/core';
-import { PickerItem, PickerItemProps } from './PickerItem';
+import { getComponent, Omit } from '@bluebase/core';
+import React from 'react';
 import { PickerProps as RNPickerProps } from 'react-native';
+
+import { PickerItem, PickerItemProps } from './PickerItem';
 
 export interface PickerProps extends Omit<RNPickerProps, 'mode'> {
 	/**

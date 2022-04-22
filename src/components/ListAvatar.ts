@@ -1,5 +1,6 @@
-import { AvatarProps } from './Avatar';
 import { getComponent } from '@bluebase/core';
+
+import { AvatarProps } from './Avatar';
 
 export interface ListAvatarProps extends AvatarProps {}
 

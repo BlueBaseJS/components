@@ -1,4 +1,5 @@
-import { Omit, getComponent } from '@bluebase/core';
+import { getComponent, Omit } from '@bluebase/core';
+
 import { ImageProps } from './Image';
 
 export interface BlueBaseImageProps extends Omit<ImageProps, 'source'> {

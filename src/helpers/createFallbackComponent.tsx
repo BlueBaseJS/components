@@ -1,12 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
+import { getComponent } from '@bluebase/core';
+import React from 'react';
+
 import { Body1, Body2, View } from '../';
 
-import React from 'react';
-import { getComponent } from '@bluebase/core';
-
 export interface CreateFallbackComponentParams {
+	[key: string]: any;
 	name: string;
 	moduleName: string;
-	[key: string]: any;
 }
 
 /**

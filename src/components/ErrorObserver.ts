@@ -1,11 +1,15 @@
-import { MaybeRenderPropChildren } from '../utils/Components';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+
+import { MaybeRenderPropChildren } from '../utils/Components';
 
 export interface ErrorObserverState {
 	readonly error?: Error;
 }
 
 export interface ErrorObserverProps {
+	[prop: string]: any;
+
 	/** If an error is passed as a prop, shows an error state. */
 	error?: Error;
 
@@ -22,8 +26,6 @@ export interface ErrorObserverProps {
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
-
-	[prop: string]: any;
 }
 
 /**

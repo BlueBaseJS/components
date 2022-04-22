@@ -1,6 +1,8 @@
 import { getComponent } from '@bluebase/core';
 
 export interface PaginationProps {
+	[key: string]: any;
+
 	/** The total number of pages. */
 	count?: number;
 
@@ -17,8 +19,6 @@ export interface PaginationProps {
 	 * Used to locate this view in end-to-end tests.
 	 */
 	testID?: string;
-
-	[key: string]: any;
 }
 
 /**

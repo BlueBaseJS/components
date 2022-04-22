@@ -1,5 +1,5 @@
-import { NativeSyntheticEvent, NativeTouchEvent, ViewProps } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import { NativeSyntheticEvent, NativeTouchEvent, ViewProps } from 'react-native';
 
 export interface DrawerSlideEvent extends NativeSyntheticEvent<NativeTouchEvent> {}
 
@@ -103,6 +103,7 @@ export interface DrawerLayoutProps extends ViewProps {
 	 * The navigation view that will be rendered to the side of the
 	 * screen and can be pulled in.
 	 */
+	// eslint-disable-next-line no-undef
 	renderNavigationView: () => JSX.Element;
 
 	/**

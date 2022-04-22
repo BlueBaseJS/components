@@ -1,5 +1,6 @@
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
 
 export interface DialogActionsProps {
 	children: React.ReactNode;
@@ -39,7 +40,6 @@ export default class MyComponent extends React.Component {
     );
   }
 }
-
 
 export default MyComponent;
 ```

@@ -1,5 +1,5 @@
-import React from 'react';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
 
 export interface NoopProps {
 	children?: React.ReactNode;

@@ -1,6 +1,8 @@
-import { DynamicIconProps } from './DynamicIcon';
-import { ViewStyle } from 'react-native';
 import { getComponent } from '@bluebase/core';
+import React from 'react';
+import { ViewStyle } from 'react-native';
+
+import { DynamicIconProps } from './DynamicIcon';
 
 export interface TabProps {
 	/** If true, the tab will be disabled. */
