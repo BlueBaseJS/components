@@ -1,5 +1,5 @@
 import { getComponent } from '@bluebase/core';
-import { ViewProps } from 'react-native';
+import { View as NativeView, ViewProps } from 'react-native';
 
 export { ViewProps };
-export const View = getComponent<ViewProps>('View');
+export const View = getComponent<ViewProps>('View') as typeof NativeView;
