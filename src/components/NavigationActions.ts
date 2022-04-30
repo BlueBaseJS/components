@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { getComponent } from '@bluebase/core';
-import { NavigationProp, ParamListBase } from '@react-navigation/native';
+import { NavigationProp, ParamListBase, Route } from '@react-navigation/native';
 import React from 'react';
 
 export interface NavigationActionParams {
@@ -24,6 +24,11 @@ export type NavigationActionPayload =
 
 export type NavigationActionsObject = {
 	source: any;
+
+	/**
+	 * Route
+	 */
+	route: Route<string, object>;
 
 	/**
 	 * Navigate to a route in current navigation tree.
