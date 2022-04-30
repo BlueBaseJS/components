@@ -31,12 +31,13 @@ import React from 'react';
 // //// //
 
 export type RouteType =
-	| 'bottom-tabs'
-	| 'drawer'
-	| 'material-bottom-tabs'
-	| 'material-top-tabs'
-	| 'native-stack'
-	| 'stack';
+| 'bottom-tabs'
+| 'drawer'
+| 'material-bottom-tabs'
+| 'material-top-tabs'
+| 'native-stack'
+| 'stack'
+| 'switch';
 
 export interface BlueBaseContextPack {
 	BB: BlueBase;
@@ -44,15 +45,13 @@ export interface BlueBaseContextPack {
 	intl: IntlContextData;
 }
 
-export type CustomRouteConfig = BaseRouteConfig<
+export type CustomRouteConfig = Omit<BaseRouteConfig<
 	ParamListBase,
 	keyof ParamListBase,
 	NavigationState,
 	{},
 	EventMapBase
-> & {
-	type: RouteType | string;
-
+>, 'children'> & {
 	/** Screen component */
 	screen?: React.ComponentType<any> | string;
 
@@ -261,6 +260,20 @@ export type StackNavigatorConfig = CustomNavigatorConfig<
 	type: 'stack';
 };
 
+// /////////////// //
+// Switch Navigator //
+// /////////////// //
+
+export type SwitchRouteConfig = CustomRouteConfig & {
+};
+
+export type SwitchNavigatorConfig = Omit<CustomNavigatorConfig<
+	SwitchRouteConfig,
+	{}
+>, 'screenOptions' | 'defaultScreenOptions'> & {
+	type: 'Switch';
+};
+
 // ///////// //
 // Navigator //
 // ///////// //
@@ -271,7 +284,8 @@ export type RouteConfig =
 	| MaterialBottomTabRouteConfig
 	| MaterialTopTabRouteConfig
 	| NativeStackRouteConfig
-	| StackRouteConfig;
+	| StackRouteConfig
+	| SwitchRouteConfig;
 
 export type NavigatorProps =
 	| BottomTabNavigatorConfig
@@ -279,7 +293,8 @@ export type NavigatorProps =
 	| MaterialBottomTabNavigatorConfig
 	| MaterialTopTabNavigatorConfig
 	| NativeStackNavigatorConfig
-	| StackNavigatorConfig;
+	| StackNavigatorConfig
+	| SwitchNavigatorConfig;
 
 /**
  * Props for the Router component
