@@ -271,7 +271,7 @@ export type SwitchNavigatorConfig = Omit<CustomNavigatorConfig<
 	SwitchRouteConfig,
 	{}
 >, 'screenOptions' | 'defaultScreenOptions'> & {
-	type: 'Switch';
+	type: 'switch';
 };
 
 // ///////// //
