@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { getComponent } from '@bluebase/core';
-import { NavigationProp, ParamListBase, Route } from '@react-navigation/native';
+import { NavigationProp, ParamListBase, RouteProp } from '@react-navigation/native';
 import React from 'react';
 
 export interface NavigationActionParams {
@@ -28,7 +28,7 @@ export type NavigationActionsObject = {
 	/**
 	 * Route
 	 */
-	route: Route<string, object>;
+	 route: RouteProp<any, any>;
 
 	/**
 	 * Navigate to a route in current navigation tree.
@@ -129,11 +129,7 @@ export type NavigationActionsObject = {
 	 * @param name Route name of the new route.
 	 * @param [params] Params object for the new route.
 	 */
-	replace<RouteName extends keyof ParamListBase>(
-		...args: undefined extends ParamListBase[RouteName]
-			? [screen: RouteName] | [screen: RouteName, params: ParamListBase[RouteName]]
-			: [screen: RouteName, params: ParamListBase[RouteName]]
-	): void;
+	replace(name: string, params?: object | undefined): void;
 
 	/**
 	 * Push a new screen onto the stack.
@@ -141,17 +137,13 @@ export type NavigationActionsObject = {
 	 * @param name Name of the route for the tab.
 	 * @param [params] Params object for the route.
 	 */
+	push(name: string, params?: object | undefined): void;
 
-	push<RouteName extends keyof ParamListBase>(
-		...args: undefined extends ParamListBase[RouteName]
-			? [screen: RouteName] | [screen: RouteName, params: ParamListBase[RouteName]]
-			: [screen: RouteName, params: ParamListBase[RouteName]]
-	): void;
 	/**
 	 * Pop a screen from the stack.
 	 */
-
 	pop(count?: number): void;
+
 	/**
 	 * Pop to the first route in the stack, dismissing all other screens.
 	 */
@@ -186,11 +178,7 @@ export type NavigationActionsObject = {
 	 * @param name Name of the route for the tab.
 	 * @param [params] Params object for the route.
 	 */
-	jumpTo<RouteName extends Extract<keyof ParamListBase, string>>(
-		...args: undefined extends ParamListBase[RouteName]
-			? [screen: RouteName] | [screen: RouteName, params: ParamListBase[RouteName]]
-			: [screen: RouteName, params: ParamListBase[RouteName]]
-	): void;
+	jumpTo(name: string, params?: object | undefined): void;
 };
 
 export interface NavigationActionsProps {
