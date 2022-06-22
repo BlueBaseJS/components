@@ -47,7 +47,7 @@ export interface ComponentStateProps {
 	/**
 	 * Description Text
 	 */
-	description?: string;
+	description?: any;
 
 	/**
 	 * Description Text props
