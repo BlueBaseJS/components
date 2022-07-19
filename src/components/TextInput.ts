@@ -4,28 +4,6 @@ import { TextInputProps as RNTextInputProps } from 'react-native';
 
 export interface TextInputProps extends RNTextInputProps {
 	/**
-	 * Specifies autocomplete hints for the system, so it can provide autofill.
-	 * On Android, the system will aways attempt to offer autofill by using
-	 * heuristics to identify the type of content. To disable autocomplete,
-	 * set autoComplete to off.
-	 */
-	autoComplete?:
-		| 'off'
-		| 'username'
-		| 'password'
-		| 'email'
-		| 'name'
-		| 'tel'
-		| 'street-address'
-		| 'postal-code'
-		| 'cc-number'
-		| 'cc-csc'
-		| 'cc-exp'
-		| 'cc-exp-month'
-		| 'cc-exp-year'
-		| string;
-
-	/**
 	 * If `true`, the input will be disabled.
 	 */
 	disabled?: boolean;
