@@ -1,8 +1,8 @@
 import { getComponent } from '@bluebase/core';
 
-import { IconProps } from './Icon';
+import { IconButtonProps } from './IconButton';
 
-export interface TextInputIconProps extends IconProps {}
+export interface TextInputIconProps extends IconButtonProps {}
 
 export const TextInputIconDefaultProps: Partial<TextInputIconProps> = {
 	// size: 24,
