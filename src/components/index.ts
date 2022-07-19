@@ -92,6 +92,8 @@ export * from './TableTitle';
 export * from './Tabs';
 export * from './Text';
 export * from './TextInput';
+export * from './TextInputAffix';
+export * from './TextInputIcon';
 export * from './TouchableItem';
 export * from './View';
 export * from './WaitObserver';

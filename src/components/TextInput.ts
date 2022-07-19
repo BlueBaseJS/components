@@ -2,6 +2,9 @@ import { getComponent } from '@bluebase/core';
 import React from 'react';
 import { TextInputProps as RNTextInputProps } from 'react-native';
 
+import { TextInputAffix } from './TextInputAffix';
+import { TextInputIcon } from './TextInputIcon';
+
 export interface TextInputProps extends RNTextInputProps {
 	/**
 	 * If `true`, the input will be disabled.
@@ -48,7 +51,16 @@ export interface TextInputProps extends RNTextInputProps {
 	 * Web only
 	 */
 	type?: string;
+
+	left?: React.ReactNode;
+
+	right?: React.ReactNode;
 }
+
+type TextInputType = React.ComponentType<TextInputProps> & {
+	Affix: typeof TextInputAffix;
+	Icon: typeof TextInputIcon;
+};
 
 /**
  * A foundational component for inputting text into the app via a keyboard.
@@ -56,7 +68,7 @@ export interface TextInputProps extends RNTextInputProps {
  * auto-capitalization, placeholder text, and different keyboard types, such
  * as a numeric keypad.
  */
-export const TextInput = getComponent<TextInputProps>('TextInput');
+export const TextInput = getComponent<TextInputProps>('TextInput') as TextInputType;
 
 /**
  * Default props for TextInput component
@@ -72,3 +84,6 @@ export const TextInputDefaultProps = {
 	secureTextEntry: false,
 	style: {},
 };
+
+TextInput.Affix = TextInputAffix;
+TextInput.Icon = TextInputIcon;
