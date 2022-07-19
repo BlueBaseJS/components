@@ -18,7 +18,7 @@ export interface IconButtonProps extends IconProps {
 	/**
 	 * Function to execute on press.
 	 */
-	onPress: () => void;
+	onPress?: () => void;
 
 	style?: any;
 }
