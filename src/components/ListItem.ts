@@ -81,6 +81,8 @@ export const ListItemDefaultProps = {
 	disabled: false,
 	inset: false,
 	selected: false,
+	titleNumberOfLines: 1,
+	descriptionNumberOfLines: 2,
 };
 
 /**
