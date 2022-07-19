@@ -62,7 +62,9 @@ export interface PickerProps<T = any> extends Omit<RNPickerProps<T>, 'mode'> {
 	placeholder?: string;
 }
 
-type PickerType<T = any> = React.ComponentType<PickerProps<T>> & { Item: React.ComponentType<PickerItemProps<T>> };
+type PickerType<T = any> = React.ComponentType<PickerProps<T>> & {
+	Item: React.ComponentType<PickerItemProps<T>>;
+};
 
 /**
  * Picker components are used for collecting user provided information

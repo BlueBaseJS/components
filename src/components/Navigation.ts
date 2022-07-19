@@ -31,13 +31,13 @@ import React from 'react';
 // //// //
 
 export type RouteType =
-| 'bottom-tabs'
-| 'drawer'
-| 'material-bottom-tabs'
-| 'material-top-tabs'
-| 'native-stack'
-| 'stack'
-| 'switch';
+	| 'bottom-tabs'
+	| 'drawer'
+	| 'material-bottom-tabs'
+	| 'material-top-tabs'
+	| 'native-stack'
+	| 'stack'
+	| 'switch';
 
 export interface BlueBaseContextPack {
 	BB: BlueBase;
@@ -45,13 +45,10 @@ export interface BlueBaseContextPack {
 	intl: IntlContextData;
 }
 
-export type CustomRouteConfig = Omit<BaseRouteConfig<
-	ParamListBase,
-	keyof ParamListBase,
-	NavigationState,
-	{},
-	EventMapBase
->, 'children'> & {
+export type CustomRouteConfig = Omit<
+	BaseRouteConfig<ParamListBase, keyof ParamListBase, NavigationState, {}, EventMapBase>,
+	'children'
+> & {
 	/** Screen component */
 	screen?: React.ComponentType<any> | string;
 
@@ -264,13 +261,12 @@ export type StackNavigatorConfig = CustomNavigatorConfig<
 // Switch Navigator //
 // /////////////// //
 
-export type SwitchRouteConfig = CustomRouteConfig & {
-};
+export type SwitchRouteConfig = CustomRouteConfig & {};
 
-export type SwitchNavigatorConfig = Omit<CustomNavigatorConfig<
-	SwitchRouteConfig,
-	{}
->, 'screenOptions' | 'defaultScreenOptions'> & {
+export type SwitchNavigatorConfig = Omit<
+	CustomNavigatorConfig<SwitchRouteConfig, {}>,
+	'screenOptions' | 'defaultScreenOptions'
+> & {
 	type: 'switch';
 };
 

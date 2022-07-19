@@ -28,7 +28,7 @@ export type NavigationActionsObject = {
 	/**
 	 * Route
 	 */
-	 route: RouteProp<any, any>;
+	route: RouteProp<any, any>;
 
 	/**
 	 * Navigate to a route in current navigation tree.

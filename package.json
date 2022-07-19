@@ -20,7 +20,7 @@
     "build": "run-s clean && run-p build:* && cp -rf ./dist/src/* ./dist && rm -rf ./dist/src",
     "build:main": "tsc -p tsconfig.json && babel ./src --out-dir dist --ignore \"**/__tests__\",\"**/__stories__\" --extensions \".ts,.tsx,.js,.jsx\"",
     "fix": "run-s fix:*",
-    "fix-prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:md": "remark . -o",
     "fix:lint": "eslint src --ext=ts,tsx --fix .",
     "test": "run-s build test:*",
