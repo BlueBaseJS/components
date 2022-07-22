@@ -1,3 +1,9 @@
+# [8.0.0-alpha.11](https://github.com/BlueBaseJS/components/compare/v8.0.0-alpha.10...v8.0.0-alpha.11) (2022-07-22)
+
+### Features
+
+*   **Slider:** Added valueLabelFormat prop ([af6eac1](https://github.com/BlueBaseJS/components/commit/af6eac146c38f4f2948a4d707a8e4d92fe545f78))
+
 # [8.0.0-alpha.10](https://github.com/BlueBaseJS/components/compare/v8.0.0-alpha.9...v8.0.0-alpha.10) (2022-07-19)
 
 ### Bug Fixes
