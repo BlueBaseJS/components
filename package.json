@@ -2,7 +2,7 @@
   "name": "@bluebase/components",
   "description": "A utility library to use & create BlueBase Components.",
   "author": "BlueEast Team <code@blueeast.com>",
-  "version": "1.1.0",
+  "version": "8.0.0-alpha.10",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/index.js",
