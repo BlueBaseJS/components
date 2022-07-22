@@ -45,6 +45,8 @@ export interface SliderProps extends NativeSliderProps {
 	 */
 	showValue?: boolean;
 
+	valueLabelFormat?: (value: number) => string;
+
 	onSlidingStart?: (value: number) => void;
 }
 
