@@ -1,104 +1,296 @@
-import { getComponent } from '@bluebase/core';
+/* eslint-disable max-len */
+import {
+	BlueBase,
+	getComponent,
+	IntlContextData,
+	MaybeThunk,
+	ThemeContextData,
+} from '@bluebase/core';
+import { BottomTabNavigationOptions as BaseBottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
+import {
+	DefaultNavigatorOptions,
+	EventMapBase,
+	NavigationState,
+	ParamListBase,
+	RouteConfig as BaseRouteConfig,
+	RouteProp,
+} from '@react-navigation/core';
+import { DrawerNavigationOptions as BaseDrawerNavigationOptions } from '@react-navigation/drawer';
+import {
+	MaterialBottomTabNavigationOptions as BaseMaterialBottomTabNavigationOptions
+} from '@react-navigation/material-bottom-tabs';
+import {
+	MaterialTopTabNavigationOptions as BaseMaterialTopTabNavigationOptions
+} from '@react-navigation/material-top-tabs';
+import { NativeStackNavigationOptions as BaseNativeStackNavigationOptions } from '@react-navigation/native-stack';
+import { StackNavigationOptions as BaseStackNavigationOptions } from '@react-navigation/stack';
 import React from 'react';
-import { TextStyle, ViewStyle } from 'react-native';
 
-import { MaybeThunk } from '../utils/Thunks';
+// //// //
+// Base //
+// //// //
 
-type renderFunction<T = any> = (props: T) => React.ReactElement<T>;
+export type RouteType =
+	| 'bottom-tabs'
+	| 'drawer'
+	| 'material-bottom-tabs'
+	| 'material-top-tabs'
+	| 'native-stack'
+	| 'stack'
+	| 'switch';
 
-export interface NavigationOptions {
-	title?: string;
-	header?: React.ReactElement<any> | renderFunction<any /* HeaderProps*/> | null;
-	headerTransparent?: boolean;
-	headerTitle?: string | React.ReactElement<any>;
-	headerTitleStyle?: TextStyle;
-	headerTitleAllowFontScaling?: boolean;
-	headerTintColor?: string;
-	headerLeft?:
-		| React.ReactElement<any>
-		| ((backButtonProps: any /* HeaderBackButtonProps*/) => React.ReactElement<any>)
-		| null;
-	headerBackTitle?: string | null;
-	headerBackImage?: React.ReactElement<any>;
-	headerTruncatedBackTitle?: string;
-	headerBackTitleStyle?: TextStyle;
-	headerPressColorAndroid?: string;
-	headerRight?: React.ReactElement<any> | ((props: any) => React.ReactElement<any>) | null;
-	headerStyle?: ViewStyle;
-	headerForceInset?: any /* HeaderForceInset*/;
-	headerBackground?: React.ReactElement<any> | renderFunction<any /* HeaderProps*/> | null;
-	gesturesEnabled?: boolean;
-	gestureResponseDistance?: { vertical?: number; horizontal?: number };
-	gestureDirection?: 'default' | 'inverted';
-	// [key: string]: any,
+export interface BlueBaseContextPack {
+	BB: BlueBase;
+	themes: ThemeContextData;
+	intl: IntlContextData;
 }
 
-export interface RouteConfig {
-	[key: string]: any;
-
-	/** Name of route */
-	name: string;
-
+export type CustomRouteConfig = Omit<
+	BaseRouteConfig<ParamListBase, keyof ParamListBase, NavigationState, {}, EventMapBase>,
+	'children'
+> & {
 	/** Screen component */
 	screen?: React.ComponentType<any> | string;
 
 	/** URL */
-	path: string;
+	path?: string;
 
 	/** Should route match exact path pattern? */
 	exact?: boolean;
 
-	/** Navigation options */
-	navigationOptions?: MaybeThunk<NavigationOptions>;
-
 	/** Child Navigator */
 	navigator?: NavigatorProps;
-}
 
-export interface NavigatorProps {
-	[key: string]: any;
+	// options?: NavigationOptions | ((props: {
+	// 	route: RouteProp<ParamListBase, keyof ParamListBase>;
+	// 	navigation: any;
+	// }, ctx: BlueBaseContextPack) => NavigationOptions);
+};
 
-	/**
-	 * Defaults to 'switch'
-	 */
-	type?: 'switch' | 'stack' | string;
+export type CustomNavigatorConfig<RouteConfigObject, NavigationOptions extends {}> = Omit<
+	DefaultNavigatorOptions<ParamListBase, NavigationState, NavigationOptions, EventMapBase>,
+	'children'
+> & {
+	type: RouteType;
 
 	/**
 	 * Routes
 	 */
-	routes: MaybeThunk<RouteConfig[]>;
+	routes: MaybeThunk<RouteConfigObject[]>;
 
 	/**
-	 * [Stack Navigator] Sets the default screen of the navigator.
-	 * Must match one of the keys in route configs.
+	 * Default options for all screens under this navigator.
 	 */
-	initialRouteName?: string;
+	screenOptions?:
+		| NavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => NavigationOptions);
 
 	/**
-	 * Default navigation options to use for screens.
+	 * Default options specified by the navigator.
+	 * It receives the custom options in the arguments if a function is specified.
 	 */
-	defaultNavigationOptions?: MaybeThunk<NavigationOptions>;
+	defaultScreenOptions?:
+		| NavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase>;
+					navigation: any;
+					options: NavigationOptions;
+				},
+				ctx: BlueBaseContextPack
+		  ) => NavigationOptions);
+};
 
-	/**
-	 * Defines the style for rendering and transitions:
-	 *
-	 * - `card` - Use the standard iOS and Android screen transitions. This is the default.
-	 * - `modal` - Make the screens slide in from the bottom which is a common iOS pattern.
-	 * Only works on iOS, has no effect on Android.
-	 */
-	mode?: 'card' | 'modal';
+// ///////////////////// //
+// Bottom Tabs Navigator //
+// ///////////////////// //
 
-	/**
-	 * Specifies how the header should be rendered:
-	 *
-	 * - `float` - Render a single header that stays at the top and animates as screens
-	 * are changed. This is a common pattern on iOS.
-	 * - `screen` - Each screen has a header attached to it and the header fades in and
-	 * out together with the screen. This is a common pattern on Android.
-	 * - `none` - No header will be rendered.
-	 */
-	headerMode?: 'float' | 'screen' | 'none';
-}
+export type BottomTabNavigationOptions = BaseBottomTabNavigationOptions & {};
+
+export type BottomTabRouteConfig = CustomRouteConfig & {
+	options?:
+		| BottomTabNavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase, keyof ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => BottomTabNavigationOptions);
+};
+
+export type BottomTabNavigatorConfig = CustomNavigatorConfig<
+	BottomTabRouteConfig,
+	BottomTabNavigationOptions
+> & {
+	type: 'bottom-tabs';
+};
+
+// //////////////// //
+// Drawer Navigator //
+// //////////////// //
+
+export type DrawerNavigationOptions = BaseDrawerNavigationOptions & {};
+
+export type DrawerRouteConfig = CustomRouteConfig & {
+	options?:
+		| DrawerNavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase, keyof ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => DrawerNavigationOptions);
+};
+
+export type DrawerNavigatorConfig = CustomNavigatorConfig<
+	DrawerRouteConfig,
+	DrawerNavigationOptions
+> & {
+	type: 'drawer';
+};
+
+// /////////////////////////// //
+// MaterialBottomTab Navigator //
+// /////////////////////////// //
+
+export type MaterialBottomTabNavigationOptions = BaseMaterialBottomTabNavigationOptions & {};
+
+export type MaterialBottomTabRouteConfig = CustomRouteConfig & {
+	options?:
+		| MaterialBottomTabNavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase, keyof ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => MaterialBottomTabNavigationOptions);
+};
+
+export type MaterialBottomTabNavigatorConfig = CustomNavigatorConfig<
+	MaterialBottomTabRouteConfig,
+	MaterialBottomTabNavigationOptions
+> & {
+	type: 'material-bottom-tabs';
+};
+
+// //////////////////////// //
+// MaterialTopTab Navigator //
+// //////////////////////// //
+
+export type MaterialTopTabNavigationOptions = BaseMaterialTopTabNavigationOptions & {};
+
+export type MaterialTopTabRouteConfig = CustomRouteConfig & {
+	options?:
+		| MaterialTopTabNavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase, keyof ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => MaterialTopTabNavigationOptions);
+};
+
+export type MaterialTopTabNavigatorConfig = CustomNavigatorConfig<
+	MaterialTopTabRouteConfig,
+	MaterialTopTabNavigationOptions
+> & {
+	type: 'material-top-tabs';
+};
+
+// ///////////////////// //
+// NativeStack Navigator //
+// ///////////////////// //
+
+export type NativeStackNavigationOptions = BaseNativeStackNavigationOptions & {};
+
+export type NativeStackRouteConfig = CustomRouteConfig & {
+	options?:
+		| NativeStackNavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase, keyof ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => NativeStackNavigationOptions);
+};
+
+export type NativeStackNavigatorConfig = CustomNavigatorConfig<
+	NativeStackRouteConfig,
+	NativeStackNavigationOptions
+> & {
+	type: 'native-stack';
+};
+
+// /////////////// //
+// Stack Navigator //
+// /////////////// //
+
+export type StackNavigationOptions = BaseStackNavigationOptions & {};
+
+export type StackRouteConfig = CustomRouteConfig & {
+	options?:
+		| StackNavigationOptions
+		| ((
+				props: {
+					route: RouteProp<ParamListBase, keyof ParamListBase>;
+					navigation: any;
+				},
+				ctx: BlueBaseContextPack
+		  ) => StackNavigationOptions);
+};
+
+export type StackNavigatorConfig = CustomNavigatorConfig<
+	StackRouteConfig,
+	StackNavigationOptions
+> & {
+	type: 'stack';
+};
+
+// /////////////// //
+// Switch Navigator //
+// /////////////// //
+
+export type SwitchRouteConfig = CustomRouteConfig & {};
+
+export type SwitchNavigatorConfig = Omit<
+	CustomNavigatorConfig<SwitchRouteConfig, {}>,
+	'screenOptions' | 'defaultScreenOptions'
+> & {
+	type: 'switch';
+};
+
+// ///////// //
+// Navigator //
+// ///////// //
+
+export type RouteConfig =
+	| BottomTabRouteConfig
+	| DrawerRouteConfig
+	| MaterialBottomTabRouteConfig
+	| MaterialTopTabRouteConfig
+	| NativeStackRouteConfig
+	| StackRouteConfig
+	| SwitchRouteConfig;
+
+export type NavigatorProps =
+	| BottomTabNavigatorConfig
+	| DrawerNavigatorConfig
+	| MaterialBottomTabNavigatorConfig
+	| MaterialTopTabNavigatorConfig
+	| NativeStackNavigatorConfig
+	| StackNavigatorConfig
+	| SwitchNavigatorConfig;
 
 /**
  * Props for the Router component

@@ -1,10 +1,10 @@
 import { getComponent, Omit } from '@bluebase/core';
+import { PickerProps as RNPickerProps } from '@react-native-picker/picker';
 import React from 'react';
-import { PickerProps as RNPickerProps } from 'react-native';
 
 import { PickerItem, PickerItemProps } from './PickerItem';
 
-export interface PickerProps extends Omit<RNPickerProps, 'mode'> {
+export interface PickerProps<T = any> extends Omit<RNPickerProps<T>, 'mode'> {
 	/**
 	 * If `true`, the input will be disabled.
 	 */
@@ -62,7 +62,9 @@ export interface PickerProps extends Omit<RNPickerProps, 'mode'> {
 	placeholder?: string;
 }
 
-type PickerType = React.ComponentType<PickerProps> & { Item: React.ComponentType<PickerItemProps> };
+type PickerType<T = any> = React.ComponentType<PickerProps<T>> & {
+	Item: React.ComponentType<PickerItemProps<T>>;
+};
 
 /**
  * Picker components are used for collecting user provided information

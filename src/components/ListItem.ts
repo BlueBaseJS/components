@@ -1,5 +1,6 @@
 import { getComponent } from '@bluebase/core';
 import React from 'react';
+import { TextProps, TextStyle, ViewStyle } from 'react-native';
 
 export interface ListItemProps {
 	/**
@@ -43,13 +44,45 @@ export interface ListItemProps {
 	 */
 	inset?: boolean;
 
-	style?: any;
+	style?: ViewStyle;
+
+	/**
+	 * Style that is passed to Title element.
+	 */
+	titleStyle?: TextStyle;
+
+	/**
+	 * Style that is passed to Description element.
+	 */
+	descriptionStyle?: TextStyle;
+
+	/**
+	 * Truncate Title text such that the total number of lines does not exceed this number.
+	 */
+	titleNumberOfLines?: number;
+
+	/**
+	 * Truncate Description text such that the total number of lines does not exceed this number.
+	 */
+	descriptionNumberOfLines?: number;
+
+	/**
+	 * Ellipsize Mode for the Title. One of 'head', 'middle', 'tail', 'clip'.
+	 */
+	titleEllipsizeMode?: TextProps['ellipsizeMode'];
+
+	/**
+	 * Ellipsize Mode for the Description. One of 'head', 'middle', 'tail', 'clip'.
+	 */
+	descriptionEllipsizeMode?: TextProps['ellipsizeMode'];
 }
 
 export const ListItemDefaultProps = {
 	disabled: false,
 	inset: false,
 	selected: false,
+	titleNumberOfLines: 1,
+	descriptionNumberOfLines: 2,
 };
 
 /**

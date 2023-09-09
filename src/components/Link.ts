@@ -1,29 +1,19 @@
 import { getComponent } from '@bluebase/core';
+import { NavigationAction, ParamListBase } from '@react-navigation/native';
+import { To } from '@react-navigation/native/lib/typescript/src/useLinkTo';
 import React from 'react';
-import { NativeSyntheticEvent, NativeTouchEvent } from 'react-native';
+import { GestureResponderEvent, TextProps } from 'react-native';
 
-import { NavigationActionParams } from './NavigationActions';
-
-export interface LinkProps {
-	/**
-	 * If we give a different component, like Button, allow more props to pass on
-	 * to the component.
-	 */
+export type LinkProps = {
 	[key: string]: any;
 
-	routeName?: string;
-	path?: string;
-	params?: NavigationActionParams;
-	onPress?: (ev: NativeSyntheticEvent<NativeTouchEvent>) => void;
-	component?: React.ComponentType<any>;
-	method?: 'navigate' | 'push' | 'replace';
-
-	/**
-	 * @deprecated
-	 * Use "method" instead
-	 */
-	replace?: boolean;
-}
+	to: To<ParamListBase>;
+	action?: NavigationAction;
+	target?: string;
+	onPress?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent> | GestureResponderEvent) => void;
+} & (TextProps & {
+	children: React.ReactNode;
+});
 
 export const LinkDefaultProps: Partial<LinkProps> = {
 	method: 'navigate',

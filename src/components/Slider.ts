@@ -1,6 +1,6 @@
 import { getComponent } from '@bluebase/core';
+import { SliderProps as NativeSliderProps } from '@react-native-community/slider';
 import React from 'react';
-import { SliderProps as NativeSliderProps } from 'react-native';
 
 export interface SliderProps extends NativeSliderProps {
 	/**
@@ -44,6 +44,8 @@ export interface SliderProps extends NativeSliderProps {
 	 * If `true`, the component will display value
 	 */
 	showValue?: boolean;
+
+	valueLabelFormat?: (value: number) => string;
 
 	onSlidingStart?: (value: number) => void;
 }
