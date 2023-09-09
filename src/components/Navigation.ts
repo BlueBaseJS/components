@@ -67,7 +67,7 @@ export type CustomRouteConfig = Omit<
 	// }, ctx: BlueBaseContextPack) => NavigationOptions);
 };
 
-export type CustomNavigatorConfig<RouteConfigObject, NavigationOptions> = Omit<
+export type CustomNavigatorConfig<RouteConfigObject, NavigationOptions extends {}> = Omit<
 	DefaultNavigatorOptions<ParamListBase, NavigationState, NavigationOptions, EventMapBase>,
 	'children'
 > & {
