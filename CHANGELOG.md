@@ -1,3 +1,9 @@
+# [8.0.0-alpha.12](https://github.com/BlueBaseJS/components/compare/v8.0.0-alpha.11...v8.0.0-alpha.12) (2023-09-09)
+
+### Features
+
+*   Updated dependencies ([ea661c9](https://github.com/BlueBaseJS/components/commit/ea661c9a43e9f211bbd239240aaffc377cda0841))
+
 # [8.0.0-alpha.11](https://github.com/BlueBaseJS/components/compare/v8.0.0-alpha.10...v8.0.0-alpha.11) (2022-07-22)
 
 ### Features
