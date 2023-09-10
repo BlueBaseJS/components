@@ -1,4 +1,5 @@
 import { getComponent } from '@bluebase/core';
+import React from 'react';
 
 import { IconProps } from './Icon';
 
@@ -21,6 +22,8 @@ export interface IconButtonProps extends IconProps {
 	onPress?: () => void;
 
 	style?: any;
+
+	children?: React.ReactNode;
 }
 
 export const IconButtonDefaultProps: Partial<IconButtonProps> = {
