@@ -1,3 +1,9 @@
+# [8.1.0](https://github.com/BlueBaseJS/components/compare/v8.0.0...v8.1.0) (2023-09-10)
+
+### Features
+
+*   **IconButton:** Added children prop ([554ce7e](https://github.com/BlueBaseJS/components/commit/554ce7e3b65e9f3c76c8539d8f38e79ecb90fd84))
+
 # [8.0.0](https://github.com/BlueBaseJS/components/compare/v7.0.2...v8.0.0) (2023-09-09)
 
 ### Bug Fixes
