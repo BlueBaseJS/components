@@ -1,3 +1,9 @@
+## [8.1.2](https://github.com/BlueBaseJS/components/compare/v8.1.1...v8.1.2) (2024-04-13)
+
+### Bug Fixes
+
+*   Fixed CI ([fcf6628](https://github.com/BlueBaseJS/components/commit/fcf6628e43a18e0b3be0e4395a634098360258ee))
+
 ## [8.1.1](https://github.com/BlueBaseJS/components/compare/v8.1.0...v8.1.1) (2024-04-13)
 
 ### Bug Fixes
