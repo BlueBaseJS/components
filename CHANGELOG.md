@@ -1,3 +1,9 @@
+## [8.1.1](https://github.com/BlueBaseJS/components/compare/v8.1.0...v8.1.1) (2024-04-13)
+
+### Bug Fixes
+
+*   **Slider:** Removed default value ([f7f512c](https://github.com/BlueBaseJS/components/commit/f7f512cc1bf60a1727b2c76ed0f242f6d25ac0e2))
+
 # [8.1.0](https://github.com/BlueBaseJS/components/compare/v8.0.0...v8.1.0) (2023-09-10)
 
 ### Features
