@@ -60,5 +60,4 @@ export const SliderDefaultProps = {
 	maximumValue: 1,
 	minimumValue: 0,
 	step: 0,
-	value: 0,
 };
